@@ -1,0 +1,118 @@
+/* Create below example using css waves generator START */
+
+section {
+    background-image: url(img/back.png);
+    height: 500px;
+    background-size: cover;
+}
+
+.main34{
+    background-image: url(img/pati.png);
+    background-size: cover;
+    position: relative;
+    top: 25px;
+    overflow: hidden;
+
+}
+
+.flex2 {
+    display: flex;
+    justify-content: space-around;
+
+}
+.box-box img{
+    border: solid 1px;
+    border-radius: 50px;
+}
+
+.our-team h1 {
+    text-align: center;
+    padding-top: 50px;
+    color: aliceblue;
+}
+
+.meet{
+    padding-top: 15px;
+    text-align: center;
+    color: aliceblue;
+    padding-bottom: 160px;
+
+}
+
+.box-2 {
+    position: relative;
+    top: 85px;
+    left: 10px;
+}   
+
+.box-3 { 
+    position: relative;
+    top: -38px;
+    left: 10px;
+}
+.flex2 img{
+    border: solid 1px red;
+}
+
+.box-for {
+    position: relative;
+    bottom: 50px;
+    left: 10px;
+}
+
+.box-55 {
+    position: relative;
+    bottom: 50px;
+    left: 10px;
+}
+
+.box-66 {
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+}
+.web{
+    position: relative;
+    top: 20px;
+}
+.img-31 h2{
+    font-size: 21px;
+    color: brown;
+}
+.img-31 span{
+    color: white;
+}
+
+.img-11 {
+    height: 1px;
+    width: 65px;
+    background-color: white;
+    margin:0 auto;
+    position: relative;
+    bottom: 128px;
+    left: 25px;
+}
+
+.img-22 {
+    height: 1px;
+    width: 65px;
+    background-color: white;
+    margin:0 auto;
+    position: relative;
+    bottom: 129px;
+    right: 75px;
+
+}
+.img-333{
+    height: 7px;
+    width: 7px;
+    background-color:red;
+    margin: 0 auto;
+    position: relative;
+    bottom: 134px;
+    right: 23px;
+    border-radius: 30px;
+}
+
+
+/* Create below example using css waves generator AND */

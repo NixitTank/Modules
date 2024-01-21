@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Module 1-2</title>
+    <link rel="stylesheet" href="D:\TOPS-PROJECT-S\Modeul\CSS\Module 1-2 in css.CSS">
+</head>
+
+<body>
+
+    <h1>
+        <center>CSS Module 1-2</center>
+    </h1>
+
+    <fieldset>
+        <h2>
+            1. What are the benefits of using CSS?
+        </h2>
+
+        <p>
+            <strong>Ans:</strong>
+            1) Better User Experience. CSS not only makes web pages easy on the eye, it also allows for user-friendly
+            formatting. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            2) Quicker Development Time. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            3) Faster Page Speed. More code means slower page speed. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            4) Compatibility Across Devices. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            5) Easy Formatting Changes.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>
+            2. What are the disadvantages of CSS?
+
+        </h2>
+
+        <p>
+            <strong>Ans:</strong>
+            1)Learning Curve. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            2)Cross-Browser Issues and Browser Compatibility. CSS might not always look the same across different web
+            browsers. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            3)Complex Layouts and Limited Layout Control. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            4)Security Concerns. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            5)Over-Specificity and Overriding Styles. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            6)Maintenance Challenges. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            7)File Size and Performance Impact.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>
+            3. What is the difference between CSS2 and CSS3?
+        </h2>
+
+        <p>
+            <strong>Ans:</strong>
+
+            <br>
+
+        <table border="1">
+            <tbody>
+                <tr>
+                    <th>S.No.</th>
+                    <th>CSS</th>
+                    <th>CSS3</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>CSS is capable of positioning texts and objects.&nbsp;</th>
+                    <th>On the other hand, CSS3 is capable of making the web page more attractive and takes less time to
+                        create. CSS3 is backward compatible with CSS.</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>Responsive designing is not supported in CSS</th>
+                    <th>CSS3 is the latest version, hence it supports responsive design.</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>CSS cannot be split into modules.</th>
+                    <th>Whereas CSS3 can be breakdown into modules.</th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th>Using CSS, we cannot build 3D animation and transformation.</th>
+                    <th>But in CSS3 we can perform all kinds of animation and transformations as it supports animation
+                        and 3D transformations.</th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th>CSS is very slow as compared to CSS3</th>
+                    <th>Whereas CSS3 is faster than CSS.</th>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <th>In CSS we have set of standard colors and it uses basic color schemes only.</th>
+                    <th>Whereas CSS3 has a good collection of HSL RGBA, HSLA, and gradient colors.</th>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <th>In CSS we can only use single text blocks.</th>
+                    <th>But in CSS3 we can use multi-column text blocks</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <th>CSS does not support media queries.</th>
+                    <th>But CSS3 supports media queries</th>
+                </tr>
+                <tr>
+                    <th>9</th>
+                    <th>CSS codes are not supported by all types of modern browsers.</th>
+                    <th>Being the latest version, CSS3 codes are supported by all modern browsers.</th>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <th>In CSS, designers have to manually develop rounded gradients and corners.</th>
+                    <th>But CSS3 provides advanced codes for setting rounded gradients and corners</th>
+                </tr>
+                <tr>
+                    <th>11</th>
+                    <th>There is no special effect like shadowing text, text animation, etc. in CSS. The animation was
+                        coded in jQuery and JavaScript.</th>
+                    <th>CSS3 has many advance features like text shadows, visual effects, and a wide range of font
+                        styles and colors.</th>
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <th>In CSS, the user can add background colors to list items and lists, set images for the list
+                        items, etc.</th>
+                    <th>Whereas CSS3 list has a special <i>display</i> property defined in it. Even list items also have
+                        counter reset properties.</th>
+                </tr>
+                <tr>
+                    <th>13</th>
+                    <th>CSS was developed in 1996.</th>
+                    <th>CSS3 is the latest version of CSS and was released in 2005.</th>
+                </tr>
+                <tr>
+                    <th>14</th>
+                    <th>CSS is memory intensive.</th>
+                    <th>CSS3 memory consumption is low as compared to CSS.</th>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>4. Name a few CSS style components?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+
+        <p>
+        <ul>
+            <li>
+                Properties: These are human-readable identifiers that indicate which stylistic features you want to
+                modify. For example, font-size , width , background-color .
+            </li>
+
+            <li>
+                Values: Each property is assigned a value. This value indicates how to style the property.
+            </li>
+        </ul>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>5. What do you understand by CSS opacity?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            The opacity CSS property sets the opacity of an element. Opacity is the degree to which content behind an
+            element is hidden, and is the opposite of transparency.
+        </p>
+
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <h2>6. How can the background color of an element be changed?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            To add background color in HTML, use the CSS background-color property. Set it to the color name or code you
+            want and place it inside a style attribute. Then add this style attribute to an HTML element, like a table,
+            heading, div, or span tag.
+        </p>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>7. How can image repetition of the backup be controlled?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            This task can be achieved by using the background-repeat property that will help us to control the
+            repetition of the image. The background-repeat property in CSS is used to repeat the background image both
+            horizontally and vertically. It also decides whether the background image will be repeated or not.
+        </p>
+
+        <br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>8. What is the use of the background-position property?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            The background-position property sets the starting position of a background image. Tip: By default, a
+            background-image is placed at the top-left corner of an element, and repeated both vertically and
+            horizontally.
+        </p>
+
+        <br>
+
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>9. Which property controls the image scroll in the background?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            The background-attachment property specifies whether the background image will scroll along with the rest of
+            the elements on the page when the user slides the scroll-bar in the browser or whether the image will stay
+            fixed to the page. The background-attachment property can either be set to scroll or fixed.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>10. Why should background and color be used as separate properties?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            Why background and color are the separate properties if they should always be set together? There are two
+            reasons behind this: It enhances the legibility of style sheets. The background property is a complex
+            property in CSS, and if it is combined with color, the complexity will further increase.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>11. How to center block elements using CSS1?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            To centrally align the block elements, we can simply make use of the &lt;center&gt; tag. All the elements
+            within the &lt;center&gt; tag will be centrally aligned.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>12. How to maintain the CSS specifications?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME
+            type) text/css is registered for use with CSS by RFC 2318 (March 1998).
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>13. What are the ways to integrate CSS as a web page?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            CSS may be added to HTML in three different ways. To style a single HTML element on the page, use Inline CSS
+            in a style attribute. By adding CSS to the head section of our HTML document, we can embed an internal
+            stylesheet. We can also connect to an external stylesheet that separates our CSS from our HTML.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>14.What is embedded style sheets?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            An embedded style sheet is declared within the &lt; head &gt; element of an XHTML document. It applies to
+            the whole document, rather than just one element. Each style declaration (or CSS rule) gets applied to
+            everything in the document that matches that rule.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>15. What are the external style sheets?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            An external style sheet is a separate CSS file that can be accessed by creating a link within the head
+            section of the webpage. Multiple webpages can use the same link to access the stylesheet. The link to an
+            external style sheet is placed within the head section of the page.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>16. What are the advantages and disadvantages of using external style sheets?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            <strong>The advantages of External Style Sheets are as follows :</strong>
+        <ul>
+            <li>With the help of External Style Sheets, the styles of numerous documents can be organized from one
+                single file.
+            </li>
+            <li>In External Style Sheets, Classes can be made for use on numerous HTML element types in many forms of
+                the site.
+            </li>
+            <li>In complex contexts, Methods like selector and grouping can be implemented to apply styles.</li>
+        </ul>
+
+        <strong>The disadvantages of External Style Sheets are as follows :</strong>
+
+        <ul>
+            <li>An extra download is essential to import style information for each file.</li>
+            <li>The execution of the file may be deferred till the external style sheet is loaded.
+            </li>
+            <li>While implementing style sheets, we need to test Web pages with multiple browsers in order to check
+                compatibility issues.</li>
+        </ul>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>17.What is the meaning of the CSS selector?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the
+            browser which HTML elements should be selected to have the CSS property values inside the rule applied to
+            them.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>18. What are the media types allowed by CSS?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+        <table border="1">
+            <tbody>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>all</td>
+                    <td>Used for all media type devices</td>
+                </tr>
+                <tr>
+                    <td>print</td>
+                    <td>Used for printers</td>
+                </tr>
+                <tr>
+                    <td>screen</td>
+                    <td>Used for computer screens, tablets, smart-phones etc.</td>
+                </tr>
+                <tr>
+                    <td>speech</td>
+                    <td>Used for screenreaders that "reads" the page out loud</td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>19.What is the rule set?</h2>
+
+        <strong>Ans:</strong>
+
+        <br>
+
+        <p>
+            A rule set is a collection of one or many rules that are executed together as a single unit against a
+            specific set of records (either from one source or a set of conjoined sources) and generate several levels
+            of statistics.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <ul>
+            <strong>
+                <li> image gallery using display grid with responsive </li>
+            </strong>
+        </ul>
+
+        <br>
+
+        <div class="row1">
+            <div class="col1"><img class="a" src="Img/images (6).jpg" alt=""> </div>
+            <div class="col2"><img class="a" src="Img/images (7).jpg" alt=""> </div>
+            <div class="col8 men">
+
+                <ul class="dis">
+                    <strong>
+                        <li class="for">SHUTTER</li>
+                    </strong>
+                    <br>
+
+                    <li class="for">HOME</li>
+                    <li class="for">PHOTOS</li>
+                    <li class="for">BIO</li>
+                    <li class="for">BLOG</li>
+                    <li class="for">CONTACT</li>
+                </ul>
+
+            </div>
+            <div class="col3"><img class="a" src="Img/images (1).jpg" alt=""> </div>
+            <div class="col4"><img class="a" src="Img/images (2).jpg" alt=""> </div>
+            <div class="col5"><img class="a" src="Img/images (3).jpg" alt=""> </div>
+            <div class="col6"><img class="a" src="Img/images (4).jpg" alt=""> </div>
+            <div class="col7"><img class="a" src="Img/images (5).jpg" alt=""> </div>
+        </div>
+    </fieldset>
+
+    <br>
+
+    <!--Create below example with the help of clip path START-->
+
+    <fieldset>
+        <section>
+            <ul>
+                <h2>Create below example with the help of clip path</h2>
+            </ul>
+
+            <!-- <br> -->
+
+            <section class="mainimg ">
+
+                <div>
+                    <nav class="navbar">
+                        <div class="logo">
+                            <h1><span>L</span>ogo</h1>
+                        </div>
+                        <div class="mainhome">
+                            <ul>
+                                <li> <a href="#">HOME</a></li>
+                                <li> <a href="#">ABOUT</a></li>
+                                <li> <a href="#">PORTFOLIO</a></li>
+                                <li> <a href="#">PRICING</a></li>
+                                <li> <a href="#">TEAM</a></li>
+                                <li> <a href="#">BLOG</a></li>
+                                <li> <a href="#">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="row">
+                        <div class="our">
+                            <span> Our Clients Are Our First Priority </span>
+
+                        </div>
+
+                        <div class="welcome">
+                            <h1>WELCOME TO SKY</h1>
+                        </div>
+
+                        <div class="bo">
+                            <div class="bo1">
+                                <i class="fa-light fa-less-than"></i>
+                            </div>
+                            <div class="bo2">
+                                <i class="fa-light fa-greater-than"></i>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="line1"></div>
+                            <div class="dot2"></div>
+                            <div class="line3"></div>
+                        </div>
+
+                        <div class="lorem">
+                            <p>Lorem Ipsum is simply dummy te xt of the printing and typesetting industry. Lorem Ipsum
+                                has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                                of type and scrambled it to make a type specimen book.</p>
+                        </div>
+
+                        <div class="buton">
+                            <div class="but1"><button>GET STARTED NOW</button>
+                            </div>
+                            <div class="but2"> LEARN MORE
+                            </div>
+                        </div>
+
+                        <div class="fo">
+                            <i></i>
+                        </div>
+
+                    </div>
+
+            </section>
+
+
+            <section class="main2">
+                <div>
+                    <div class="main3">
+
+
+                        <div class="div-first">
+                            <div class="img-one">
+                                <img src="Img/1 (1).png" alt="">
+                            </div>
+                            <div class="img1">
+                                <img src="Img/1.png" alt="">
+                            </div>
+                            <div class="color">
+                                <h1>SLEEK DESIGN</h1>
+                            </div>
+                            <div class="img4">
+                            </div>
+                            <div class="img5">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has
+                                    been
+                                    the industry.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="div-first">
+                            <div class="img-one">
+                                <img src="Img/2 (1).png" alt="">
+                            </div>
+                            <div class="img1">
+                                <img src="Img/2.png" alt="">
+                            </div>
+                            <div class="img3">
+                                <h1>CLEAN CODE</h1>
+                            </div>
+                            <div class="img4">
+                            </div>
+                            <div class="img5">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has
+                                    been
+                                    the industry.</p>
+                            </div>
+                        </div>
+                        <div class="div-first">
+                            <div class="img-one">
+                                <img src="Img/2 (1).png" alt="">
+                            </div>
+                            <div class="img1">
+                                <img src="Img/3.png" alt="">
+                            </div>
+                            <div class="img3">
+                                <h1>CREATIVE IDEAS</h1>
+                            </div>
+                            <div class="img4">
+                            </div>
+                            <div class="img5">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has
+                                    been
+                                    the industry.</p>
+                            </div>
+                        </div>
+                        <div class="div-first">
+                            <div class="img-one">
+                                <img src="Img/2 (1).png" alt="">
+                            </div>
+                            <div class="img1">
+                                <img src="Img/4.png" alt="">
+                            </div>
+                            <div class="img3">
+                                <h1>FREE SUPPORT</h1>
+                            </div>
+                            <div class="img4">
+                            </div>
+                            <div class="img5">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has
+                                    been
+                                    the industry.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+    </fieldset>
+
+    <!--Create below example with the help of clip path AND-->
+
+    <br>
+
+    <!--Multiple background one side bg-color other side contain image as bg START-->
+
+    <fieldset>
+        <h2>Multiple background one side bg-color other side contain image as bg</h2>
+
+        <br>
+
+        <div class="main-box1">
+            <div class="main-line">
+                <h1>Our Services&nbsp;&nbsp;</h1>
+                <br>
+                <br>
+                <h2>Career Courses</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit<br> Ullam sequi doloremque quas vitae atque
+                    ducimus.</p>
+                <br>
+                <br>
+                <h2>Study Abroad</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit<br> Voluptate aliquam error porro commodi
+                    fugiat sunt.</p>
+                <br>
+                <br>
+                <h2>Job Placement</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit<br>Accusantium, voluptatum? Ab quia modi
+                    reiciendis.</p>
+            </div>
+            <div class="img-no-repeat"></div>
+        </div>
+
+    </fieldset>
+
+
+    <!--Multiple background one side bg-color other side contain image as bg AND-->
+
+</body>
+
+</html>
