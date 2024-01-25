@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Extension of Filename</title>
+</head>
+<body>
+
+    <h2>14. Write a JavaScript exercise to get the extension of a filename.? 
+    </h2>
+
+    <p class="Example"><strong>Example :</strong></p>
+
+    <fieldset>
+        <pre>
+
+            &lt;h3>Select a file and click on the button to check the file extension.&lt;/h3>
+            &lt;div>
+            &lt;input type="file" id="chooseFile" />
+            &lt;input type="button" value="Check Extension" onclick="checkFileExtension();" />
+            &lt;/div>
+            &lt;h3>
+            The file extension is a: 
+            &lt;p class="output">&lt;/p>
+            &lt;/h3 &gt;
+
+
+            &lt;script>
+                function checkFileExtension() {
+                  fileName = document.querySelector('#chooseFile').value;
+                  extension = fileName.split('.').pop();
+                  document.querySelector('.output').textContent = extension;
+                };
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <p class="Example"><strong>Output :</strong></p>
+
+    <fieldset>
+        <h3>Select a file and click on the button to check the file extension.</h3>
+        <!-- <div> -->
+          <input type="file" id="chooseFile" />
+          <input type="button" value="Check Extension" onclick="checkFileExtension();" />
+        <!-- </div> -->
+        <h3>
+          The file extension is a : <h3 class="output"></h3>
+          
+        </h3>
+
+
+    </fieldset>
+
+    <script>
+        function checkFileExtension() {
+          fileName = document.querySelector('#chooseFile').value;
+          extension = fileName.split('.').pop();
+          document.querySelector('.output').textContent = extension;
+        };
+      </script>
+
+      <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="13_ Fahrenheit to Celsius.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="15_Question Answer.HTML">Next ❯</a>
+        </div>
+
+    </div>
+  
+    
+</body>
+</html>

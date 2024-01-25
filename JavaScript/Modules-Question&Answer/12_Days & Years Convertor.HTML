@@ -8,17 +8,35 @@
 </head>
 <body>
 
-   <h2> WAP to convert years into days and days into years?</h2>
+   <h2>12. WAP to convert years into days and days into years?</h2>
 
    <p class="Example"><strong>Example :</strong></p>
    
-   
+   <fieldset>
+    <pre>
+        let numofDays = prompt('Enter Total Days : ');
+        let numofYear = prompt('Enter Numbers of Year : ');
+        //let year, days;
+        function daystoYear(numofDays) {
+            year = parseInt(numofDays / 365);
+            return year;
+        }
+    
+        function yearstoDays(numofYear) {
+            days = (numofYear * 365);
+            return days;
+        }
+        document.getElementById('br').innerHTML = numofDays + ' Days are Approx = '  + daystoYear(numofDays)  +  '<br>' + numofYear + ' year have approx = ' + yearstoDays(numofYear);
+       </pre>
+   </fieldset>
         
    
    <p class="Example"><strong>Output :</strong></p>
     
-    <h3 id="br"></h3>
-            <h3 id="dd"></h3>
+    <fieldset>
+        <h3 id="br"></h3>
+    </fieldset>
+
             <script>
                 let numofDays = prompt('Enter Total Days : ');
                 let numofYear = prompt('Enter Numbers of Year : ');
@@ -34,6 +52,18 @@
                 }
                 document.getElementById('br').innerHTML = numofDays + ' Days are Approx = '  + daystoYear(numofDays)  +  '<br>' + numofYear + ' year have approx = ' + yearstoDays(numofYear);
             </script>
+
+            <div class="button-maindiv">
+
+                <div class="divbutton">
+                    <a class="left" href="11_ Rectangle area calculate .HTML">❮ Previous</a>
+                </div>
+        
+                <div class="divbutton">
+                    <a class="left" href="13_ Fahrenheit to Celsius.HTML">Next ❯</a>
+                </div>
+        
+            </div>
 
     
 </body>
