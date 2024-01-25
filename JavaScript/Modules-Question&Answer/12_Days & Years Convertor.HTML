@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Days Years Convertor</title>
+</head>
+<body>
+
+   <h2> WAP to convert years into days and days into years?</h2>
+
+   <p class="Example"><strong>Example :</strong></p>
+   
+   
+        
+   
+   <p class="Example"><strong>Output :</strong></p>
+    
+    <h3 id="br"></h3>
+            <h3 id="dd"></h3>
+            <script>
+                let numofDays = prompt('Enter Total Days : ');
+                let numofYear = prompt('Enter Numbers of Year : ');
+                //let year, days;
+                function daystoYear(numofDays) {
+                    year = parseInt(numofDays / 365);
+                    return year;
+                }
+
+                function yearstoDays(numofYear) {
+                    days = (numofYear * 365);
+                    return days;
+                }
+                document.getElementById('br').innerHTML = numofDays + ' Days are Approx = '  + daystoYear(numofDays)  +  '<br>' + numofYear + ' year have approx = ' + yearstoDays(numofYear);
+            </script>
+
+    
+</body>
+</html>
