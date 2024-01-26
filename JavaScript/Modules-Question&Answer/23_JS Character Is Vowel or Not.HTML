@@ -15,17 +15,18 @@
 
             &lt;h3 id="ans1">&lt;/h3>
             &lt;h3 id="ans2">&lt;/h3>
+            &lt;h3 id="ans3">&lt;/h3>
 
 
             &lt;script>
                 let msg = alert('Check the Character Is Vowel or Not ?');
                 const ch = prompt('Enter a Character')
                 if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
-                document.write("&lt;b>"+ch+"&lt;/b>" + " is a Vowel");
-                else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
                 document.getElementById('ans1').innerHTML = ("&lt;b>"+ch+"&lt;/b>" + " is a Vowel");
+                else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+                document.getElementById('ans2').innerHTML = ("&lt;b>"+ch+"&lt;/b>" + " is a Vowel");
                 else
-                document.getElementById('ans2').innerHTML = ("&lt;b>"+ch+"&lt;/b>" + " is a Character");
+                document.getElementById('ans3').innerHTML = ("&lt;b>"+ch+"&lt;/b>" + " is a Character");
             &lt;/script>
 
         </pre>
@@ -36,7 +37,8 @@
     <fieldset>
 
         <h3 id="ans1"></h3>
-        <h3 id="ans1"></h3>
+        <h3 id="ans2"></h3>
+        <h3 id="ans3"></h3>
 
     </fieldset>
 
@@ -44,11 +46,11 @@
         let msg = alert('Check the Character Is Vowel or Not ?');
         const ch = prompt('Enter a Character = ')
         if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
-        document.write("<b>"+ch+"</b>" + " is a Vowel");
-        else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
         document.getElementById('ans1').innerHTML = ("<b>"+ch+"</b>" + " is a Vowel");
+        else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+        document.getElementById('ans2').innerHTML = ("<b>"+ch+"</b>" + " is a Vowel");
         else
-        document.getElementById('ans1').innerHTML = ("<b>"+ch+"</b>" + " is a Character");
+        document.getElementById('ans3').innerHTML = ("<b>"+ch+"</b>" + " is a Character");
     </script>
 
     <div class="button-maindiv">
@@ -58,7 +60,7 @@
         </div>
 
         <div class="divbutton">
-            <a class="left" href="">Next ❯</a>
+            <a class="left" href="24_Check Number is Positive, Negative and Zero.HTML">Next ❯</a>
         </div>
 
     </div>
