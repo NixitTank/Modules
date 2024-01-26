@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Check Number is Positive, Negative</title>
+</head>
+<body>
+
+    <h2>22. Check Number Is Positive or Negative in JavaScript? </h2>
+
+    
+    <fieldset>
+
+        <pre>
+
+            &lt;h3 id="ans1">&lt;/h3>
+            &lt;h3 id="ans2">&lt;/h3>
+            &lt;h3 id="ans3">&lt;/h3>
+
+            &lt;script>
+                const number = prompt("Enter a Number = ");
+                if (number > 0) {
+                    document.getElementById("ans1").innerHTML =(number +  " is POSITIVE NUMBER");
+                }
+                else if (number < 0) {
+                    document.getElementById("ans2").innerHTML =( number +  " is NEGATIVE NUMBER ");
+                }
+                else {
+                    document.getElementById("ans3").innerHTML =(number +  " is ZERO NUMBER");
+                };
+            &lt;/script>
+
+        </pre>
+        
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+
+        <h3 id="ans1"></h3>
+        <h3 id="ans2"></h3>
+        <h3 id="ans3"></h3>
+
+    </fieldset>
+    
+    <script>
+        const number = prompt("Enter a Number = ");
+        if (number > 0) {
+            document.getElementById("ans1").innerHTML =(number +  " is POSITIVE NUMBER");
+        }
+        else if (number < 0) {
+            document.getElementById("ans2").innerHTML =( number +  " is NEGATIVE NUMBER ");
+        }
+        else {
+            document.getElementById("ans3").innerHTML =(number +  " is ZERO NUMBER");
+        };
+    </script>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="20_Difference Between And.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="23_JS Character Is Vowel or Not.HTML">Next ❯</a>
+        </div>
+
+    </div>
+</body>
+</html>
