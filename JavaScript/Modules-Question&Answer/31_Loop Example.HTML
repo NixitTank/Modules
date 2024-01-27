@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Loop Example</title>
+    <style>
+        .border{
+            overflow: auto;
+            width: 100%;
+            border: 1px solid ;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>31. Write a print 972 to 897 using for loop in JS?</h2>
+
+    <p class="Example"><strong>Program :</strong></p>
+
+    <fieldset>
+        <pre>
+            &lt;h3 id="answer">&lt;/h3>
+
+            &lt;script>
+
+                let output = '';
+                for (let i = 972;  i >= 897; i--) {
+                    output += i;
+                    document.getElementById('answer').innerText = output ;
+                }
+        
+            &lt;/script>
+        </pre>
+    </fieldset>
+
+    <br>
+
+    <p class="Example"><strong>Output :</strong></p>
+    
+        <div class="border">
+                <h3 id="answer"></h3>
+        </div>
+
+
+
+    <script>
+
+        let output = '';
+        for (let i = 972;  i >= 897; i--) {
+            output += i;
+            document.getElementById('answer').innerText = output ;
+        }
+
+    </script>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="30_JS  Looping.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="32_JS Factorial.HTML">Next ❯</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Factorial</title>
+</head>
+<body>
+
+    <h2>32. Write to print factorial of given number?</h2>
+
+    <p class="Example"><strong>Program :</strong></p>
+
+    <fieldset>
+        <pre>
+
+            &lt;h3 id="ans">&lt;/h3>
+
+            &lt;script>
+                let num = prompt('Enter the number for Factorial Calculation = ')
+                function factorial(n) { 
+                    if (n == 0) return 1; 
+                    return n * factorial(n - 1); 
+                  } 
+                    
+                  // Driver Code 
+                  //let num = 5; 
+                  document.getElementById('ans').innerHTML = ("Factorial of " + num + " is " + factorial(num)); 
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <br>
+
+    <p class="Example"><strong>Output :</strong></p>
+
+    <fieldset>
+        <h3 id="ans"></h3>
+    </fieldset>
+
+    <script>
+        let num = prompt('Enter the number for Factorial Calculation = ')
+        function factorial(n) { 
+            if (n == 0) return 1; 
+            return n * factorial(n - 1); 
+          } 
+            
+          // Driver Code 
+          //let num = 5; 
+          document.getElementById('ans').innerHTML = ("Factorial of " + num + " is " + factorial(num)); 
+    </script>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="31_Loop Example.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="32_JS Factorial.HTML">Next ❯</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>
