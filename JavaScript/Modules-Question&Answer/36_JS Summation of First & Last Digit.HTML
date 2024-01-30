@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Summation of First & Last Digit</title>
+</head>
+<body>
+
+    <h2>36.  Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -
+        5) in JS?</h2>
+
+        <p class="Example"><strong>Program :</strong></p>
+
+        <fieldset>
+            <pre>
+
+                &lt;h3 id="ans1">&lt;/h3>
+                &lt;h3 id="ans2">&lt;/h3>
+                &lt;h3 id="ans3">&lt;/h3>
+                &lt;h3 id="ans4">&lt;/h3>
+
+                &lt;script>
+
+                    let msg = alert('Sum of First Digit Last Digit');
+                    var num = prompt('Enter Digit Minimum Three : ');
+                    var LastDigit = num % 10 ;
+                    var len = num.toString().length-1;
+        
+                    FirstDigit = parseInt(num/Math.pow(10,len));
+                    var sum = FirstDigit+LastDigit;
+        
+                    document.getElementById('ans1').innerHTML = ("Your Entered  Number : " + num + "&lt;br>");
+                    document.getElementById('ans2').innerHTML = ("FirstDigit : " + FirstDigit + "&lt;br>");
+                    document.getElementById('ans3').innerHTML = ("LastDigit : " + LastDigit  + "&lt;br>");
+                    document.getElementById('ans4').innerHTML = ("Sum of Number : " + sum);
+                    
+                &lt;/script>
+
+            </pre>
+        </fieldset>
+
+        <br>
+
+        <p class="Example"><strong>Output :</strong></p>
+
+        <fieldset>
+            <h3 id="ans1"></h3>
+            <h3 id="ans2"></h3>
+            <h3 id="ans3"></h3>
+            <h3 id="ans4"></h3>
+        </fieldset>
+
+        <script>
+
+            let msg = alert('Sum of First Digit Last Digit. ');
+            var num = prompt('Enter Digit Minimum Three : ');
+            var LastDigit = num % 10 ;
+            var len = num.toString().length-1;
+
+            FirstDigit = parseInt(num/Math.pow(10,len));
+            var sum = FirstDigit+LastDigit;
+
+            document.getElementById('ans1').innerHTML = ("Your Entered  Number : " + num + "<br>");
+            document.getElementById('ans2').innerHTML = ("FirstDigit : " + FirstDigit + "<br>");
+            document.getElementById('ans3').innerHTML = ("LastDigit : " + LastDigit  + "<br>");
+            document.getElementById('ans4').innerHTML = ("Sum of Number : " + sum);
+            
+        </script>
+
+        <div class="button-maindiv">
+
+            <div class="divbutton">
+                <a class="left" href="35_JS Summation of Number.HTML">❮ Previous</a>
+            </div>
+    
+            <div class="divbutton">
+                <a class="left" href="37_Escape characters.HTML">Next ❯</a>
+            </div>
+    
+        </div>
+    
+</body>
+</html>

@@ -15,10 +15,35 @@
     <fieldset>
         <pre>
 
+            &lt;h3 id="ans">&lt;/h3>
+
+            &lt;script>
+
+                num = prompt('Enter Number = ')
+        
+                function fibonacci(num) {
+                  let num1 = 0;
+                  let num2 = 1;
+                  let sum;
+                  let i = 0;
+                  for (i = 0; i < num; i++) {
+                      sum = num1 + num2;
+                      num1 = num2;
+                      num2 = sum;
+                  }
+                  return num2;
+                }
+        
+                document.getElementById('ans').innerHTML = fibonacci(num);
+                    
+            &lt;/script>
+
         </pre>
     </fieldset>
 
     <br>
+
+    <p class="Example"><strong>Output :</strong></p>
 
     <fieldset>
         <h3 id="ans"></h3>
@@ -28,33 +53,34 @@
 
         num = prompt('Enter Number = ')
 
-        //function fibonacci(num) {
-          //  let num1 = 0;
-          //  let num2 = 1;
-          //  let sum;
-          //  let i = 0;
-          //  for (i = 0; i < num; i++) {
-          //      sum = num1 + num2;
-          //      num1 = num2;
-          //      num2 = sum;
-          //  }
-          //  return num;
-       // }
-
-       function fibonacci(num) {
-        if (num == 1)
-            return 0;
-        if (num == 2)
-            return 1;
-        return fibonacci(num - 1) + fibonacci(num - 2);
-    }
+        function fibonacci(num) {
+          let num1 = 0;
+          let num2 = 1;
+          let sum;
+          let i = 0;
+          for (i = 0; i < num; i++) {
+              sum = num1 + num2;
+              num1 = num2;
+              num2 = sum;
+          }
+          return num2;
+        }
 
         document.getElementById('ans').innerHTML = fibonacci(num);
-    
-        
-        
             
     </script>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="32_JS Factorial.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="34_JS Reverse Number.HTML">Next ❯</a>
+        </div>
+
+    </div>
     
 </body>
 </html>

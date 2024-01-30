@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Summation of Number</title>
+</head>
+<body>
+
+    <h2>35. Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?</h2>
+    
+
+    <p class="Example"><strong>Program :</strong></p>
+
+    <fieldset>
+        <pre>
+
+            &lt;h3 id="ans">&lt;/h3>
+
+            &lt;script>
+
+                var n = prompt('Enter Number : ');
+                function getSum(n)
+                {
+                    var sum = 0;
+                    while (n != 0) {
+                        sum = sum + n % 10;
+                        n = parseInt(n / 10);
+                    }
+                    return sum;
+                }
+                document.getElementById('ans').innerHTML = (getSum(n));
+                
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <br>
+
+    <p class="Example"><strong>Output :</strong></p>
+
+    <fieldset>
+        <h3 id="ans"></h3>
+    </fieldset>
+
+    <script>
+
+            var n = prompt('Enter Number : ');
+            function getSum(n)
+            {
+                var sum = 0;
+                while (n != 0) {
+                    sum = sum + n % 10;
+                    n = parseInt(n / 10);
+                }
+                return sum;
+            }
+            document.getElementById('ans').innerHTML = (getSum(n));
+            
+    </script>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="34_JS Reverse Number.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="36_JS Summation of First & Last Digit.HTML">Next ❯</a>
+        </div>
+
+    </div>
+</body>
+</html>

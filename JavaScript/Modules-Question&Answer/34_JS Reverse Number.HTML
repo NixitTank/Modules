@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Reverse Number </title>
+</head>
+<body>
+
+    <h2>34. Write to print number in reverse order e.g.: number = 64728 --> reverse =82746 in JS?</h2>
+
+    <p class="Example"><strong>Program :</strong></p>
+
+    <fieldset>
+        <pre>
+
+            &lt;h3 id="ans">&lt;/h3>
+
+            &lt;script>
+                let num = prompt('Enter Number :' );
+                function reverseFunction(num) {
+                    let numStr = num.toString();
+                    let reversedStr = '';
+                    for (let i = numStr.length - 1; i >= 0; i--) {
+                        reversedStr += numStr[i];
+                    }
+                    return parseInt(reversedStr);
+                }
+                
+                let reversedNum = reverseFunction(num);
+                
+                document.getElementById('ans').innerHTML = (reversedNum);
+                
+          &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <br>
+
+    <p class="Example"><strong>Output :</strong></p>
+
+    <fieldset>
+        <h3 id="ans"></h3>
+    </fieldset>
+
+
+    <script>
+        let num = prompt('Enter Number :' );
+        function reverseFunction(num) {
+            let numStr = num.toString();
+            let reversedStr = '';
+            for (let i = numStr.length - 1; i >= 0; i--) {
+                reversedStr += numStr[i];
+            }
+            return parseInt(reversedStr);
+        }
+        
+        let reversedNum = reverseFunction(num);
+        
+        document.getElementById('ans').innerHTML = (reversedNum);
+        
+    </script>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="33_JS Fibonacci series.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="35_JS Summation of Number.HTML">Next ❯</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>
