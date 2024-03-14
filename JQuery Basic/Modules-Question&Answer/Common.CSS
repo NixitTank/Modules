@@ -1,0 +1,60 @@
+@font-face {
+  font-family: FontvCss;
+  src: url(Font/Poppins-Regular.ttf);
+}
+
+* {
+  font-family: FontvCss;
+}
+
+h2 {
+  color: black;
+  background-color: hsl(217, 86%, 25%);
+  color: white;
+  font-size: 200%;
+  font-weight: 800;
+}
+
+.paragraph {
+  font-size: 150%;
+}
+
+.Example {
+  font-size: 10;
+}
+
+/* Button start */
+
+.button-maindiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divbutton {
+  font-size: 22px;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.left {
+  display: inline-block;
+  padding: 8px 16px;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: hsl(217, 86%, 25%);
+  color: #ffffff;
+  border-color: hsl(217, 86%, 25%);
+  ;
+  border-radius: 10px;
+}
+
+.left:hover {
+  font-size: 26px;
+}
+
+/* Button And */

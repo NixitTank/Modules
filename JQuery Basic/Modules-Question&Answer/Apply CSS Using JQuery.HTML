@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+
+<button>Apply CSS Using JQuery</button>
+
+    <script>
+        $(document).ready(function(){
+        $("button").click(function(){
+            $("p").css("background-color", "red");
+        });
+        });
+    </script>
+
+</body>
+</html>
