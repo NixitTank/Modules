@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JQuery</title>
+
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <style>
+
+    @font-face{
+      font-family: font ;
+      src: url(Modules-Question&Answer/Font/Poppins-Regular.ttf);
+    }
+
+    *{
+      font-family: font;
+    }
+
+    .Example {
+      font-size: 20px;
+    }
+
+    .botton{
+      text-decoration: none;
+      padding: 8px;
+      background-color: blue;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="background-color: lightgray">
+    <center>JQuery Module</center>
+  </h1>
+
+  <fieldset>
+    <h2>1) What is jQuery?</h2>
+
+    <p>
+      jQuery is a fast, small, and feature-rich JavaScript library. It makes
+      things like HTML document traversal and manipulation, event handling,
+      animation, and Ajax much simpler with an easy-to-use API that works
+      across a multitude of browsers. With a combination of versatility and
+      extensibility, jQuery has changed the way that millions of people write
+      JavaScript.
+    </p>
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+
+    <h2>2) How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+      Jquery, JQuery Animation?</h2>
+
+      <h3>How to Apply CSS Using JQuery</h3>
+
+      <p class="Example">Example :</p>
+
+      <pre>
+        &lt;script>
+        $(document).ready(function(){
+          $("button").click(function(){
+              $("p").css({"background-color": "red" , "font-size": "30px"});
+          });
+          });
+        &lt;/script>
+      </pre>
+
+      <a class="botton" href="Modules-Question&Answer/Apply CSS Using JQuery.HTML">Try it Yourself »</a>
+
+      <br><br><br>
+
+      <h3>How to Add Class and Remove Class in Jquery</h3>
+
+      <p class="Example">Example :</p>
+
+      <pre>
+
+        &lt;script>
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("h1, h2, p").toggleClass("red");
+            });
+          });
+        &lt;/script>
+
+      </pre>
+
+      <a class="botton" href="Modules-Question&Answer/Add Class and Remove Class.HTML">Try it Yourself »</a>
+
+      <br>
+      <br><br>
+
+      <h3>JQuery Animation</h3>
+
+      <p class="Example">Example :</p>
+
+      <pre>
+        &lt;script> 
+          $(document).ready(function(){
+            $("button").click(function(){
+              $("div").animate({left: '250px'});
+            });
+          });
+        &lt;/script>
+      </pre>
+
+      <a class="botton" href="Modules-Question&Answer/JQuery Animation.HTML">Try it Yourself »</a>
+
+      <br><br><br>
+
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+
+    <h2>3) How to create slider with animation?</h2>
+
+    <p>The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.</p>
+
+    <p>If the elements have been slid down, slideToggle() will slide them up.</p>
+      
+    <p> the elements have been slid up, slideToggle() will slide them down.</p>
+
+    <p>The optional speed parameter can take the following values: "slow", "fast", milliseconds.</p>
+
+    <p>The optional callback parameter is a function to be executed after the sliding completes.</p>
+
+    <p>The following example demonstrates the slideToggle() method:</p>
+
+    <p class="Example">Example :</p>
+
+    <pre>
+      $("#div1").click(function(){
+        $("#div2").slideToggle();
+      });
+    </pre>
+
+    <a class="botton" href="Modules-Question&Answer/JQuery_animation.HTML">Try it Yourself »</a>
+
+  </fieldset>
+
+
+
+</body>
+
+</html>
