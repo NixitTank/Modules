@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="D:\TOPS-WORK\Modules\JavaScript\Modules-Question&Answer\Common.CSS"
+    />
+    <title>Current Day/Time</title>
+
+    <style>
+      @font-face {
+        font-family: fontcss;
+        src: url("Font/Poppins-Regular.ttf");
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: fontcss;
+      }
+
+      .maindiv {
+        border: 2px solid;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-image: url(Img/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        gap: 15px;
+        font-size: 25px;
+      }
+
+      .han {
+        color: rgb(152, 228, 0);
+      }
+
+      .date {
+        border: 2px solid;
+        border-radius: 10px;
+        color: white;
+        padding: 10px;
+        box-shadow: 2px 2px blueviolet;
+      }
+
+      .time {
+        border: 2px solid;
+        border-radius: 10px;
+        padding: 10px;
+        color: white;
+        box-shadow: 2px 2px blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="maindiv">
+      <h1 class="han">Today is:</h1>
+      <h1 class="date" id="Ans"></h1>
+      <h1 class="han">Time</h1>
+      <h1 class="time" id="Ans2"></h1>
+    </div>
+
+    <script>
+      const currentDate = new Date();
+
+      const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      const d = new Date();
+      let day = weekday[d.getDay()];
+      document.getElementById("Ans").innerHTML = day;
+
+      const time = document.getElementById("Ans2");
+
+      setInterval(() => {
+        const d = new Date();
+        time.innerHTML = d.toLocaleTimeString();
+      });
+    </script>
+  </body>
+</html>

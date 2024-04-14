@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+</head>
+<body>
+
+<h2>Calculator</h2>
+
+<input type="number" id="input1" placeholder="Enter first value"><br><br>
+<input type="number" id="input2" placeholder="Enter second value"><br><br>
+
+<button onclick="performOperations()">Perform Operations</button><br><br>
+
+<p id="results"></p>
+
+<script>
+function performOperations() {
+    // Get the input values
+    var value1 = parseFloat(document.getElementById("input1").value);
+    var value2 = parseFloat(document.getElementById("input2").value);
+
+    // Check if both inputs are valid numbers
+    if (isNaN(value1) || isNaN(value2)) {
+        alert("Please enter valid numbers in both fields.");
+        return;
+    }
+
+    // Perform operations
+    var addition = value1 + value2;
+    var subtraction = value1 - value2;
+    var multiplication = value1 * value2;
+    var division = (value2 !== 0) ? value1 / value2 : "Division by zero is not allowed";
+    var percentage = (value1 / value2) * 100;
+
+    // Display the results
+    var resultsText = "Addition: " + addition + "<br>" +
+                      "Subtraction: " + subtraction + "<br>" +
+                      "Multiplication: " + multiplication + "<br>" +
+                      "Division: " + division + "<br>" +
+                      "Percentage: " + percentage.toFixed(2) + "%";
+
+    document.getElementById("results").innerHTML = resultsText;
+}
+</script>
+
+</body>
+</html>

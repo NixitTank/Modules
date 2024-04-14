@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="D:\TOPS-WORK\Modules\JavaScript\Modules-Question&Answer\Common.CSS">
+    <title>Compare Two Objects</title>
+  </head>
+  <body>
+
+    <h2>42) Write a JavaScript program to compare two objects?</h2>
+
+    <p class="Example">Example :</p>
+
+    <fieldset>
+        <pre>
+
+            &lt;script> 
+                const obj1 = { a: "Nixit", b: "Tank" }; //true
+                const obj2 = { a: "Nixit", b: "Tank" };
+
+
+                const obj3 = { a: "Nixit", b: "Tank" };
+                const obj4 = { a: "Om", b: "Tank" }; //false
+
+          
+                document.getElementById("Ans").innerHTML = (JSON.stringify(obj1) === JSON.stringify(obj2));
+
+                document.getElementById("Ans2").innerHTML = (JSON.stringify(obj3) === JSON.stringify(obj4));
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <p class="Example">Output :</p>
+
+    <fieldset>
+        <h1 id="Ans"></h1>
+
+        <h1 id="Ans2"></h1>
+    </fieldset>
+
+    
+    <script>
+      const obj1 = { a: "Nixit", b: "Tank" };
+      const obj2 = { a: "Nixit", b: "Tank" };
+      const obj3 = { a: "Nixit", b: "Tank" };
+      const obj4 = { a: "Om", b: "Tank" };
+
+      document.getElementById("Ans").innerHTML = (JSON.stringify(obj1) === JSON.stringify(obj2));
+      document.getElementById("Ans2").innerHTML = (JSON.stringify(obj3) === JSON.stringify(obj4));
+    </script>
+  </body>
+</html>
