@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Check version</title>
+</head>
+<body>
+
+    <h2>8. How to check version of React Js?</h2>
+
+    <p>
+        To check the version of React JS that you are using in your project, you can follow several methods depending on your setup:
+    </p>
+
+    <h3>Method 1: Check package.json
+    </h3>
+
+    <li>Open your project directory.
+    </li>
+    <li>Locate the package.json file.
+    </li>
+    <li>Look for the react and react-dom dependencies to see their versions.
+    </li>
+
+    <p>
+        <pre class="border">
+            {
+                "dependencies": {
+                  "react": "^17.0.2",
+                  "react-dom": "^17.0.2"
+                }
+              }
+        </pre>
+    </p>
+
+    <h3>Method 2: Using npm list
+    </h3>
+
+    <li>Open a terminal or command prompt in your project directory.
+    </li>
+    <li>Run the following command to check the version of React installed:
+    </li>
+
+    <p>
+        <pre class="border">
+            npm list react
+        </pre>
+    </p>
+
+    <p>This will display the version of React along with other dependency information.
+    </p>
+
+    <h3>Method 3: Using yarn list
+    </h3>
+
+    <p>
+        If you are using Yarn as your package manager, you can use a similar command:
+    </p>
+
+    <li>Open a terminal or command prompt in your project directory.
+    </li>
+    <li>Run the following command:
+    </li>
+
+    <p>
+        <pre class="border">
+            yarn list --pattern react
+        </pre>        
+    </p>
+
+    <p>
+        This will list all packages matching the pattern react and their versions.
+    </p>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="07_Install_React.html">❮ Previous</a>
+        </div>
+  
+        <div class="divbutton">
+            <a class="left" href="08_check_version.html">Next ❯</a>
+        </div>
+  
+    </div>
+    
+</body>
+</html>
