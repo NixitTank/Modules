@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: FontvCss;
   src: url(Font/Poppins-Regular.ttf);
@@ -61,3 +62,68 @@ h2 {
 }
 
 
+=======
+@font-face {
+  font-family: FontvCss;
+  src: url(Font/Poppins-Regular.ttf);
+}
+
+* {
+  font-family: FontvCss;
+}
+
+h2 {
+  background-color: hsl(217, 86%, 25%);
+  color: white;
+  font-size: 250%;
+  font-weight: 800;
+}
+
+.border {
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.paragraph{
+    font-size: 150%;
+}
+
+.divbutton {
+  font-size: 22px;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.left {
+  display: inline-block;
+  padding: 8px 16px;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: hsl(217, 86%, 25%);
+  color: #ffffff;
+  border-color: hsl(217, 86%, 25%);
+  border-radius: 10px;
+}
+
+.left:hover {
+  font-size: 26px;
+}
+
+.end {
+  text-align: end;
+}
+
+.button-maindiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+>>>>>>> e733c7a3d3abd6b91e79094198d8242d5d2059bc

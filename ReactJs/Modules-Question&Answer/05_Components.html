@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,4 +107,114 @@
     </div>
     
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Components</title>
+</head>
+<body>
+
+    <h2>5. What is Components in React Js?</h2>
+
+    <p>
+        Components are the building blocks of React applications. They are reusable pieces of code that can be used to create user interfaces. Components can be simple, like a button or a text input, or they can be more complex, like a navigation bar or a photo gallery.
+    </p>
+
+    <p>
+        Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components.
+    </p>
+
+    <p>
+        Class components are defined using the class keyword. They must include a render() method that returns HTML.
+    </p>
+
+    <p>
+        Function components are defined using a regular JavaScript function. They also require a render() method that returns HTML.
+    </p>
+
+    <p>
+        Components can be nested inside of other components. This allows you to create complex user interfaces out of smaller, more manageable pieces.
+    </p>
+
+    <br>
+
+
+    <p>
+        Here is an example of a simple React component:
+
+
+        <pre class="border">
+            function Welcome(props) {
+                return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
+              }
+        </pre>
+    </p>
+
+    <p>
+        This component takes a name prop and returns an h1 element with the text "Hello, {props.name}!".
+    </p>
+
+    <p>
+        Components can also have state. State is data that is specific to a component and can change over time. Components can use state to keep track of things like the value of a text input or the selected item in a list.
+
+    </p>
+
+    <br>
+
+
+    <p>
+        Here is an example of a React component with state:
+
+        <pre class="border">
+
+            class Counter extends React.Component {
+                state = {
+                  count: 0
+                };
+              
+                handleClick() {
+                  this.setState({ count: this.state.count + 1 });
+                }
+              
+                render() {
+                  return (
+                    &lt;div&gt;
+                        &lt;h1>Count: {this.state.count}&lt;/h1&gt;
+                        &lt;button onClick={this.handleClick}>Increment&lt;/button&gt;
+                    &lt;/div&gt;
+                  );
+                }
+              }
+
+        </pre>
+    </p>
+
+    <p>
+        This component has a state object that tracks the current count. The handleClick() method increments the count and the render() method displays the current count.
+
+    </p>
+
+    <p>
+        Components are a powerful tool for creating reusable and maintainable user interfaces. They are the foundation of React applications.
+
+    </p>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="04_CLI_command.html">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="05_Components.html">Next ❯</a>
+        </div>
+
+    </div>
+    
+</body>
+>>>>>>> e733c7a3d3abd6b91e79094198d8242d5d2059bc
 </html>
