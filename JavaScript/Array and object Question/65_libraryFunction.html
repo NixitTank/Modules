@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>libraryFunction</title>
+</head>
+<body>
+
+    <h2>65. Find the length of a string without using libraryFunction?</h2>
+
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+            function stringLength(s) {
+                let count = 0;
+                while (s[count] !== undefined) {
+                    count++;
+                }
+                return count;
+            }
+            
+            // Example usage:
+            let exampleString = "Hello, world!";
+            let length = stringLength(exampleString);
+            console.log("The length of the string is: " + length);
+            
+        </pre>
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+        <pre>
+            The length of the string is: 13
+        </pre>
+    </fieldset>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="64_string.html">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="66_ Enter_password.html">Next ❯</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

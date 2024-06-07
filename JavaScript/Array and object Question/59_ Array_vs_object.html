@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Array vs object</title>
+  </head>
+  <body>
+    <h2>59. Array vs object defences in JS?</h2>
+
+    <p>
+      In JavaScript, arrays and objects are both used to store collections of
+      data, but they have distinct characteristics, use cases, and methods of
+      interaction. Here’s a detailed comparison:
+    </p>
+
+    <h3>Arrays</h3>
+
+    <ol type="1">
+      <li>
+        Definition:
+
+        <ul>
+          <li>Arrays are ordered collections of elements.</li>
+          <li>Elements are accessed by their numerical index.</li>
+        </ul>
+      </li>
+
+      <li>
+        Syntax:
+        <ul>
+          <li>Defined using square brackets [].</li>
+          <li>Example: let fruits = ["apple", "banana", "cherry"];</li>
+        </ul>
+      </li>
+
+      <li>
+        Accessing Elements:
+        <ul>
+          <li>By index: fruits[0] returns "apple".</li>
+        </ul>
+      </li>
+
+      <li>
+        Length:
+
+        <ul>
+          <li>
+            Arrays have a length property that returns the number of elements.
+          </li>
+          <li>Example: fruits.length returns 3.</li>
+        </ul>
+      </li>
+
+      <li>
+        Methods:
+        <ul>
+          <li>
+            Common array methods include: push(), pop(), shift(), unshift(),
+            slice(), splice(), concat(), map(), filter(), reduce(), etc.
+          </li>
+          <li>
+            Example: fruits.push("date") adds "date" to the end of the array.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Use Cases:
+        <ul>
+          <li>Suitable for ordered collections of items.</li>
+          <li>Ideal for lists, sequences, and stacks/queues.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <br />
+
+    <h3>Objects</h3>
+
+    <ol type="1">
+      <li>
+        Definition:
+        <ul>
+          <li>Objects are collections of key-value pairs (properties).</li>
+          <li>Keys (also called properties) are usually strings or symbols.</li>
+        </ul>
+      </li>
+
+      <li>
+        Syntax:
+        <ul>
+          <li>Defined using curly braces {}.</li>
+          <li>
+            Example: let person = { name: "John", age: 30, job: "developer" };
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Accessing Properties:
+        <ul>
+          <li>By key: person.name or person["name"] returns "John".</li>
+        </ul>
+      </li>
+
+      <li>
+        Keys and Values:
+        <ul>
+          <li>The set of keys can be retrieved using Object.keys().</li>
+          <li>The set of values can be retrieved using Object.values().</li>
+        </ul>
+      </li>
+
+      <li>
+        Methods:
+
+        <ul>
+          <li>
+            Common object methods include: Object.keys(), Object.values(),
+            Object.entries(), hasOwnProperty().
+          </li>
+          <li>Example: Object.keys(person) returns ["name", "age", "job"].</li>
+        </ul>
+      </li>
+
+      <li>
+        Use Cases:
+
+        <ul>
+          <li>Suitable for collections of named properties.</li>
+          <li>
+            Ideal for representing entities with attributes (like a user,
+            product, etc.).
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <br>
+
+
+
+    <h3>Examples
+    </h3>
+
+    <h4>Array Example:
+
+    </h4>
+
+    <fieldset>
+        <pre>
+            let fruits = ["apple", "banana", "cherry"];
+            console.log(fruits[1]); // Outputs: banana
+            fruits.push("date");
+            console.log(fruits); // Outputs: ["apple", "banana", "cherry", "date"]
+        </pre>
+    </fieldset>
+
+    <br>
+
+    <h4>Object Example:
+    </h4>
+
+    <fieldset>
+        <pre>
+            let person = { name: "John", age: 30, job: "developer" };
+            console.log(person.name); // Outputs: John
+            person.age = 31;
+            console.log(person); // Outputs: { name: "John", age: 31, job: "developer" }
+            </pre>
+    </fieldset>
+
+    <div class="button-maindiv">
+
+      <div class="divbutton">
+          <a class="left" href="58_Bom_vs_Dom.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+          <a class="left" href="60_ split()_Method.html">Next ❯</a>
+      </div>
+
+  </div>
+
+  </body>
+</html>

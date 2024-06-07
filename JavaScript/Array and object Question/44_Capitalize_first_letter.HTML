@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Common.CSS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
     <title>Capitalize First Letter</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>
+      44) Write a JavaScript program to capitalize first letter of a string?
+    </h2>
 
-    <h2>44) Write a JavaScript program to capitalize first letter of a string? </h2>
+    <label for="Enter">Enter a string :</label>
+    <input id="string" type="text" placeholder="Enter a string" />
 
-    
-    <!-- <label for="Enter">Enter a string :</label> -->
-    <input id="myname" type="text" placeholder="Enter a string">
-    
+    <button onclick="Myfunction()">Click me</button>
+
     <h1 id="Ans"></h1>
 
     <script>
+      function Myfunction() {
+        let name = document.getElementById("string").Value;
 
-        //let ans = prompt("Enter String")x
-        
-        function capitalizeFLetter() {
-            let string = document.getElementById("myname").value;
-            document.getElementById("Ans").innerHTML=(string.charAt(0).toUpperCase() +
-                string.slice(1));
-        }
-        capitalizeFLetter()
-        
-        
+        let result = name.charAt(0).toUpperCase() + name.slice(1);
+
+        document.getElementById("Ans").innerHTML = name;
+      }
+
     </script>
-    
-</body>
+
+<div class="button-maindiv">
+
+  <div class="divbutton">
+      <a class="left" href="43_CSV_string.html">❮ Previous</a>
+  </div>
+
+  <div class="divbutton">
+      <a class="left" href="45_determine_var.html">Next ❯</a>
+  </div>
+
+</div>
+
+  </body>
 </html>

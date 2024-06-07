@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Result</title>
+  </head>
+  <body>
+    <h2>2. What will be the result for these expressions?</h2>
+
+    <pre>
+            1. 5 > 4
+            2. "apple" > "pineapple"
+            3. "2" > "12"
+            4. undefined == null
+            5. undefined === null
+            6. null == "\n0\n"
+            7. 7. null === +"\n0\n"
+        </pre
+    >
+
+    <h4>1. 5 > 4</h4>
+
+    <p>This expression checks if 5 is greater than 4.</p>
+    <p>Result: true.</p>
+
+    <h4>2. "apple" > "pineapple"</h4>
+
+    <p>
+      This expression compares the strings "apple" and "pineapple"
+      lexicographically (dictionary order).
+    </p>
+    <p>
+      Since the first character of "apple" ('a') is less than the first
+      character of "pineapple" ('p'), the result is false.
+    </p>
+    <p>Result: false.</p>
+
+    <h4>3. "2" > "12"</h4>
+
+    <p>This expression compares the strings "2" and "12" lexicographically.</p>
+    <p>
+      Lexicographically, "2" is greater than "12" because the comparison is done
+      character by character, and '2' is greater than '1'.
+    </p>
+    <p>Result: true.</p>
+
+    <h4>4. undefined == null</h4>
+
+    <p>
+      This expression checks if undefined is equal to null using loose equality
+      (==).
+    </p>
+    <p>In JavaScript, undefined and null are loosely equal.</p>
+    <p>Result: true.</p>
+
+    <h4>5. undefined === null</h4>
+
+    <p>
+      This expression checks if undefined is strictly equal to null using strict
+      equality (===).
+    </p>
+    <p>In JavaScript, undefined and null are not strictly equal.</p>
+    <p>Result: false.</p>
+
+    <h4>6. null == "\n0\n"</h4>
+
+    <p>
+      This expression checks if null is loosely equal to the string "\n0\n".
+    </p>
+    <p>
+      In JavaScript, null is only loosely equal to undefined, not to any other
+      value.
+    </p>
+    <p>Result: false.</p>
+
+    <h4>7. 7. null === +"\n0\n"</h4>
+
+    <p>This expression checks if null is strictly equal to the result of converting the string "\n0\n" to a number.</p>
+    <p>The string "\n0\n" when converted to a number results in 0.
+    </p>
+    <p>In JavaScript, null is not strictly equal to 0.
+    </p>
+    <p>Result: false.
+    </p>
+  </body>
+</html>

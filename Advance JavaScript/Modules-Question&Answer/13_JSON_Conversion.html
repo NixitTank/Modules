@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>JSON Conversion</title>
+  </head>
+  <body>
+    <h2>13.
+      Turn the object into JSON and back Turn the user into JSON and then read
+      it back into another variable. user = { name: "John Smith", age: 35};
+    </h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+                var user = { name: "John Smith", age: 35 };
+                
+                var userJSON = JSON.stringify(user);
+                console.log("JSON String:", userJSON); // Output: {"name":"John Smith","age":35}
+        
+                document.getElementById("Ans").innerHTML += "&lt;p>JSON String: " + userJSON + &lt;/p>";
+        
+                var parsedUser = JSON.parse(userJSON);
+                console.log("Parsed Object:", parsedUser); // Output: { name: 'John Smith', age: 35 }
+        
+                document.getElementById("Ans").innerHTML += "Parsed Object: Name - " + parsedUser.name + ", Age - " + parsedUser.age ;
+            </pre
+      >
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+      <pre>
+                <p id="Ans">
+
+                </p>
+            </pre>
+    </fieldset>
+
+    <script>
+      var user = { name: "John Smith", age: 35 };
+
+      var userJSON = JSON.stringify(user);
+      console.log("JSON String:", userJSON);
+
+      document.getElementById("Ans").innerHTML +=
+        "<p>JSON String: " + userJSON + "</p>";
+
+      var parsedUser = JSON.parse(userJSON);
+      console.log("Parsed Object:", parsedUser);
+
+      document.getElementById("Ans").innerHTML +=
+        "Parsed Object: Name - " +
+        parsedUser.name +
+        ", Age - " +
+        parsedUser.age;
+    </script>
+  </body>
+</html>

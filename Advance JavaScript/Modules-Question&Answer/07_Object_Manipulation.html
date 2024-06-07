@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Object Manipulation</title>
+</head>
+<body>
+
+    <h2>7. Write the code, one line for each action:</h2>
+
+
+    <pre>
+        a) Create an empty object user.
+        b) Add the property name with the value John.
+        c) Add the property surname with the value Smith.
+        d) Change the value of the name to Pete.
+        e) Remove the property name from the object.
+    </pre>
+
+    <h3>Check the console for results</h3>
+
+    <fieldset>
+        <pre>
+
+            &lt;script>
+                // a) Create an empty object user.
+                let user = {};
+        
+                // b) Add the property name with the value John.
+                user.name = "John";
+                console.log("After adding name:", user);
+        
+                // c) Add the property surname with the value Smith.
+                user.surname = "Smith";
+                console.log("After adding surname:", user);
+        
+                // d) Change the value of the name to Pete.
+                user.name = "Pete";
+                console.log("After changing name:", user);
+        
+                // e) Remove the property name from the object.
+                delete user.name;
+                console.log("After removing name:", user);
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <script>
+        // a) Create an empty object user.
+        let user = {};
+
+        // b) Add the property name with the value John.
+        user.name = "John";
+        console.log("After adding name:", user);
+
+        // c) Add the property surname with the value Smith.
+        user.surname = "Smith";
+        console.log("After adding surname:", user);
+
+        // d) Change the value of the name to Pete.
+        user.name = "Pete";
+        console.log("After changing name:", user);
+
+        // e) Remove the property name from the object.
+        delete user.name;
+        console.log("After removing name:", user);
+    </script>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+        <pre>
+            After adding name: {name: "John"}
+            After adding surname: {name: "John", surname: "Smith"}
+            After changing name: {name: "Pete", surname: "Smith"}
+            After removing name: {surname: "Smith"}
+        </pre>
+    </fieldset>
+    
+</body>
+</html>

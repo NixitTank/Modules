@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Slick Slider</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <style>
+      .slider {
+        width: 80%;
+        margin: 100px auto;
+      }
+      .slick-slide {
+        text-align: center;
+        color: #fff;
+        background: #3498db;
+        padding: 40px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>19. Use external js library to show slider</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+
+            &lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+            &lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+        &lt;style>
+        .slider {
+            width: 80%;
+            margin: 100px auto;
+        }
+        .slick-slide {
+            text-align: center;
+            color: #fff;
+            background: #3498db;
+            padding: 40px 0;
+        }
+    &lt;/style>
+
+    &lt;div class="slider">
+        &lt;div>Slide 1&lt;/div>
+        &lt;div>Slide 2&lt;/div>
+        &lt;div>Slide 3&lt;/div>
+        &lt;div>Slide 4&lt;/div>
+        &lt;div>Slide 5&lt;/div>
+    &lt;/div>
+
+     <!-- jQuery -->
+     &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js">&lt;/script>
+     <!-- Slick JS -->
+     &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">&lt;/script>
+     &lt;script type="text/javascript">
+         $(document).ready(function(){
+             $('.slider').slick({
+                 infinite: true,
+                 slidesToShow: 3,
+                 slidesToScroll: 1
+             });
+         });
+    &lt;/script>
+        </pre>
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <div class="slider">
+      <div>Slide 1</div>
+      <div>Slide 2</div>
+      <div>Slide 3</div>
+      <div>Slide 4</div>
+      <div>Slide 5</div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".slider").slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        });
+      });
+    </script>
+  </body>
+</html>

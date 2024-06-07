@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Dynamic Form</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      form {
+        max-width: 400px;
+        margin: auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+      .error {
+        border-color: red;
+      }
+      .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .Example {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>56. Dynamic Form Validation in JS?</h2>
+
+    <p class="Example">Example:</p>
+
+    <fieldset>
+      <pre>
+        &lt;!DOCTYPE html>
+        &lt;html lang="en">
+        &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+        &lt;link rel="stylesheet" href="Common.CSS">
+        &lt;title>Dynamic Form&lt;/title>
+
+        &lt;style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+           }
+           form {
+               max-width: 400px;
+               margin: auto;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            input {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+            }
+            .error {
+                border-color: red;
+            }
+            .error-message {
+                color: red;
+                font-size: 0.9em;
+                margin-bottom: 10px;
+            }
+            button {
+                padding: 10px 15px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+        &lt;/style>
+
+    &lt;/head>
+&lt;body>
+
+
+    &lt;form id="myForm">
+        &lt;label for="username">Username:&lt;/label>
+        &lt;input type="text" id="username" name="username" data-required="true">
+        &lt;span class="error-message" id="usernameError">&lt;/span>
+        &lt;br>
+        &lt;label for="email">Email:&lt;/label>
+        &lt;input type="email" id="email" name="email" data-required="true">
+        &lt;span class="error-message" id="emailError">&lt;/span>
+        &lt;br>
+        &lt;label for="password">Password:&lt;/label>
+        &lt;input type="password" id="password" name="password" data-required="true" data-minlength="6">
+        &lt;span class="error-message" id="passwordError">&lt;/span>
+        &lt;br>
+        &lt;button type="submit">Submit&lt;/button>
+    &lt;/form>
+
+
+    &lt;script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+                    const form = document.getElementById("myForm");
+        
+                    form.addEventListener("input", function (event) {
+                        validateField(event.target);
+                    });
+                
+                    form.addEventListener("submit", function (event) {
+                        event.preventDefault();
+                        const inputs = form.querySelectorAll("input");
+                        let valid = true;
+                    
+                        inputs.forEach(input => {
+                            if (!validateField(input)) {
+                                valid = false;
+                            }
+                        });
+                    
+                        if (valid) {
+                            alert("Form submitted successfully!");
+                        } else {
+                            alert("Please fix the errors in the form.");
+                        }
+                    });
+                
+                    function validateField(field) {
+                        const errorElement = document.getElementById(field.id + "Error");
+                        let valid = true;
+                    
+                        if (field.dataset.required === "true" && field.value.trim() === "") {
+                            valid = false;
+                            errorElement.textContent = "This field is required.";
+                        } else if (field.dataset.minlength && field.value.length < field.dataset.minlength) {
+                            valid = false;
+                            errorElement.textContent = `Minimum length is ${field.dataset.minlength}.`;
+                        } else if (field.type === "email" && !validateEmail(field.value)) {
+                            valid = false;
+                            errorElement.textContent = "Invalid email address.";
+                        } else {
+                            errorElement.textContent = "";
+                        }
+                    
+                        field.classList.toggle("error", !valid);
+                        return valid;
+                    }
+                
+                    function validateEmail(email) {
+                        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        return re.test(String(email).toLowerCase());
+                    }
+                });
+            
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+
+</pre
+      >
+    </fieldset>
+
+    <p class="Example">Output:</p>
+
+    <br /><br />
+
+    <form id="myForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" data-required="true" />
+      <span class="error-message" id="usernameError"></span>
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" data-required="true" />
+      <span class="error-message" id="emailError"></span>
+      <br />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        data-required="true"
+        data-minlength="6"
+      />
+      <span class="error-message" id="passwordError"></span>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("input", function (event) {
+          validateField(event.target);
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const inputs = form.querySelectorAll("input");
+          let valid = true;
+
+          inputs.forEach((input) => {
+            if (!validateField(input)) {
+              valid = false;
+            }
+          });
+
+          if (valid) {
+            alert("Form submitted successfully!");
+          } else {
+            alert("Please fix the errors in the form.");
+          }
+        });
+
+        function validateField(field) {
+          const errorElement = document.getElementById(field.id + "Error");
+          let valid = true;
+
+          if (field.dataset.required === "true" && field.value.trim() === "") {
+            valid = false;
+            errorElement.textContent = "This field is required.";
+          } else if (
+            field.dataset.minlength &&
+            field.value.length < field.dataset.minlength
+          ) {
+            valid = false;
+            errorElement.textContent = `Minimum length is ${field.dataset.minlength}.`;
+          } else if (field.type === "email" && !validateEmail(field.value)) {
+            valid = false;
+            errorElement.textContent = "Invalid email address.";
+          } else {
+            errorElement.textContent = "";
+          }
+
+          field.classList.toggle("error", !valid);
+          return valid;
+        }
+
+        function validateEmail(email) {
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(String(email).toLowerCase());
+        }
+      });
+    </script>
+
+<div class="button-maindiv">
+
+  <div class="divbutton">
+      <a class="left" href="55_JS_Form_Validtion.html">❮ Previous</a>
+  </div>
+
+  <div class="divbutton">
+      <a class="left" href="57_JS_Event.html">Next ❯</a>
+  </div>
+
+</div>
+  </body>
+</html>

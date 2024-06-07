@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Modal Box</title>
+
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+        text-align: center;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .modal-buttons {
+        margin-top: 20px;
+      }
+
+      .modal-buttons button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>18. Create a modal box using css and Js with three buttons</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+
+            &lt;style>
+                .modal {
+                    display: none; 
+                    position: fixed; 
+                    z-index: 1; 
+                    left: 0;
+                    top: 0;
+                    width: 100%; 
+                    height: 100%; 
+                    overflow: auto; 
+                    background-color: rgb(0,0,0); 
+                    background-color: rgba(0,0,0,0.4); 
+                    padding-top: 60px;
+                }
+                
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 5% auto; 
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; 
+                    max-width: 500px;
+                    text-align: center;
+                }
+                
+                .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                
+                .modal-buttons {
+                    margin-top: 20px;
+                }
+                
+                .modal-buttons button {
+                    margin: 5px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                }
+                
+            &lt;/style>
+
+            &lt;button id="openModalBtn">Open Modal&lt;/button>
+
+            &lt;div id="myModal" class="modal">
+                &lt;div class="modal-content">
+                    &lt;span class="close">&times;&lt;/span>
+                    &lt;p>This is a modal box!&lt;/p>
+                    &lt;div class="modal-buttons">
+                        &lt;button id="confirmBtn">Confirm&lt;/button>
+                        &lt;button id="cancelBtn">Cancel&lt;/button>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+
+            &lt;script>
+                var modal = document.getElementById("myModal");
+                
+                var btn = document.getElementById("openModalBtn");
+                
+                var span = document.getElementsByClassName("close")[0];
+                
+                var confirmBtn = document.getElementById("confirmBtn");
+                var cancelBtn = document.getElementById("cancelBtn");
+                
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+                
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+                
+                confirmBtn.onclick = function() {
+                    modal.style.display = "none";
+                    console.log("Confirmed!");
+                }
+                
+                cancelBtn.onclick = function() {
+                    modal.style.display = "none";
+                    console.log("Cancelled!");
+                }
+                
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                
+            &lt;/script>
+
+        </pre
+      >
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+      <button id="openModalBtn">Open Modal</button>
+    </fieldset>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>This is a modal box!</p>
+        <div class="modal-buttons">
+          <button id="confirmBtn">Confirm</button>
+          <button id="cancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+
+      var btn = document.getElementById("openModalBtn");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      var confirmBtn = document.getElementById("confirmBtn");
+      var cancelBtn = document.getElementById("cancelBtn");
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      confirmBtn.onclick = function () {
+        modal.style.display = "none";
+        console.log("Confirmed!");
+      };
+
+      cancelBtn.onclick = function () {
+        modal.style.display = "none";
+        console.log("Cancelled!");
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>JS Event</title>
+  </head>
+  <body>
+    <h2>57. how many type of JS Event? How to use it ?</h2>
+
+    <h3>Types of JavaScript Events</h3>
+
+    <ol type="number">
+      <li>
+        Mouse Events:
+        <ul>
+          <li>click :  Fired when an element is clicked.</li>
+          <li>dblclick :  Fired when an element is double-clicked.</li>
+          <li>
+            mousedown :  Fired when a mouse button is pressed down on an element.
+          </li>
+          <li>
+            mouseup :  Fired when a mouse button is released over an element.
+          </li>
+          <li>
+            mouseover :  Fired when the mouse pointer is moved over an element.
+          </li>
+          <li>
+            mouseout :  Fired when the mouse pointer is moved out of an element.
+          </li>
+          <li>
+            mousemove :  Fired when the mouse pointer is moved within an element.
+          </li>
+          <li>mouseenter :  Fired when the mouse pointer enters an element.</li>
+          <li>mouseleave :  Fired when the mouse pointer leaves an element.</li>
+        </ul>
+      </li>
+
+      <li>
+        Form Events:
+        <ul>
+          <li>submit : Fired when a form is submitted.</li>
+          <li>
+            change : Fired when the value of an element changes (for &lt;input,
+            &lt;select>, and &lt;textarea>).
+          </li>
+          <li>focus : Fired when an element gains focus.</li>
+          <li>blur: Fired when an element loses focus.</li>
+          <li>
+            input : Fired when the value of an &lt;input> or &lt;textarea>
+            element is changed.
+          </li>
+          <li>reset : Fired when a form is reset.</li>
+        </ul>
+      </li>
+
+      <li>
+        Media Events:
+        <ul>
+                <li>play: Fired when the media starts playing.
+                </li>
+                <li>pause: Fired when the media is paused.
+                </li>
+                <li>ended: Fired when the media has finished playing.
+                </li>
+                <li>ended: Fired when the media has finished playing.
+                </li>
+        </ul>
+      </li>
+    </ol>
+
+
+    <h3>How to Use JavaScript Events
+    </h3>
+
+    <p>
+        JavaScript events are used to create interactive web pages by responding to user actions. Here are some examples:
+    </p>
+
+    <p class="Example">Example 1 : Mouse Click Event
+    </p>
+
+  <fieldset>
+    <pre>
+        &lt;button id="myButton">Click me&lt;/button>
+        &lt;p id="displayText">Hello, World!&lt;/p>
+
+    &lt;script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            document.getElementById('displayText').textContent = 'Button Clicked!';
+        });
+    &lt;/script>
+    </pre>
+  </fieldset>
+
+    <p class="Example">Output:</p>
+
+    <fieldset>
+        <button id="myButton">Click me</button>
+    <p id="displayText">Hello, World!</p>
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            document.getElementById('displayText').textContent = 'Button Clicked!';
+        });
+    </script>
+    </fieldset>
+
+    <br>
+
+
+    <p class="Example">Example 2: Form Submit Event
+    </p>
+
+    <fieldset>
+        <pre>
+            &lt;form id="myForm">
+                &lt;input type="text" id="name" placeholder="Enter your name">
+                &lt;button type="submit">Submit</button>
+            &lt;/form>
+            &lt;p id="message"></p>
+        
+            &lt;script>
+                document.getElementById('myForm').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent form from submitting the traditional way
+                    var name = document.getElementById('name').value;
+                    document.getElementById('message').textContent = `Hello, ${name}!`;
+                });
+            &lt;/script>
+        </pre>
+    </fieldset>
+
+    <p class="Example">Output:</p>
+
+    <fieldset>
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+        <p id="message"></p>
+    
+        <script>
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form from submitting the traditional way
+                var name = document.getElementById('name').value;
+                document.getElementById('message').textContent = `Hello, ${name}!`;
+            });
+        </script>
+    </fieldset>
+
+    <div class="button-maindiv">
+
+      <div class="divbutton">
+          <a class="left" href="56_Dynamic_Form.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+          <a class="left" href="58_Bom_vs_Dom.html">Next ❯</a>
+      </div>
+
+  </div>
+  </body>
+</html>
+

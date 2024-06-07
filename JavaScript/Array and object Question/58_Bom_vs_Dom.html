@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Bom vs Dom</title>
+
+    <style>
+        .table{
+            border-collapse: collapse;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>58. What is Bom vs Dom in JS?</h2>
+
+    <p></p>
+
+    <table class="table" border="2px soid">
+      <thead>
+        <tr>
+          <th><strong>Aspect</strong></th>
+          <th><strong>DOM (Document Object Model)</strong></th>
+          <th><strong>BOM (Browser Object Model)</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Purpose</strong></td>
+          <td>
+            Manages and interacts with the structure, content, and style of web
+            documents.
+          </td>
+          <td>
+            Interacts with the browser window and provides control over browser
+            features.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Structure</strong></td>
+          <td>Represents the HTML or XML document as a tree of objects.</td>
+          <td>
+            Consists of various browser-specific objects like
+            <code>window</code>, <code>navigator</code>, <code>location</code>,
+            <code>history</code>, and <code>screen</code>.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Standardization</strong></td>
+          <td>Standardized by the W3C.</td>
+          <td>Not standardized; implementation can vary between browsers.</td>
+        </tr>
+        <tr>
+          <td><strong>Scope</strong></td>
+          <td>Focuses on the document content and structure.</td>
+          <td>Focuses on the browser environment and controls.</td>
+        </tr>
+        <tr>
+          <td><strong>Key Features</strong></td>
+          <td>
+            - Element Manipulation: Create, modify, and remove
+            elements.&lt;br&gt; - Event Handling: Manage events like clicks,
+            input, and form submissions.&lt;br&gt; - Dynamic Content: Update the
+            document content and structure dynamically.
+          </td>
+          <td>
+            - Window Control: Open, close, move, and resize browser
+            windows.&lt;br&gt; - Browser Information: Access information about
+            the browser and user environment.&lt;br&gt; - URL Manipulation:
+            Change and retrieve the URL of the current document.&lt;br&gt; -
+            History Management: Navigate through the browser history.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Primary Objects</strong></td>
+          <td>
+            <code>document</code>, <code>Element</code>, <code>Node</code>,
+            <code>Event</code>
+          </td>
+          <td>
+            <code>window</code>, <code>navigator</code>, <code>location</code>,
+            <code>history</code>, <code>screen</code>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Example Use Case</strong></td>
+          <td>
+            Changing the text content of an HTML element when a button is
+            clicked.
+          </td>
+          <td>
+            Navigating back in the browser history or reloading the current
+            page.
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <div class="button-maindiv">
+
+      <div class="divbutton">
+          <a class="left" href="57_JS_Event.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+          <a class="left" href="59_ Array_vs_object.html">Next ❯</a>
+      </div>
+
+  </div>
+  </body>
+</html>

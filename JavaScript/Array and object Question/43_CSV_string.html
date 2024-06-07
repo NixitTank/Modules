@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>CSV string</title>
+    <style>
+          .csv-container {
+            padding: 10px;
+            white-space: pre-wrap;
+        }
+
+        .csv-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>43. Write a JavaScript program to convert an array of objects into CSV string? </h2>
+
+
+    <fieldset>
+        <pre>
+
+            &lt;div>
+                &lt;div id="csv-output">&lt;/div>
+            &lt;/div>
+
+
+            &lt;script>
+                function convertArrayOfObjectsToCSV(data) {
+                    const headers = Object.keys(data[0]);
+                    
+                    const csv = [
+                        headers.join(','),
+                        ...data.map(obj =>
+                            headers.map(key => obj[key]).join(',')
+                        )
+                    ].join('\n');
+        
+                    return csv;
+                }
+        
+                const data = [
+                    { name: 'John', age: 30, city: 'New York' },
+                    { name: 'Alice', age: 25, city: 'Los Angeles' },
+                    { name: 'Bob', age: 35, city: 'Chicago' }
+                ];
+        
+                const csvString = convertArrayOfObjectsToCSV(data);
+                console.log(csvString);
+        
+                const csvOutputDiv = document.getElementById('csv-output');
+                csvOutputDiv.textContent = csvString;
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+
+    <h4>Output:</h4>
+
+    <fieldset>
+        <div class="csv-container">
+            <div id="csv-output"></div>
+        </div>
+    </fieldset>
+
+    <script>
+        function convertArrayOfObjectsToCSV(data) {
+            const headers = Object.keys(data[0]);
+            
+            const csv = [
+                headers.join(','),
+                ...data.map(obj =>
+                    headers.map(key => obj[key]).join(',')
+                )
+            ].join('\n');
+
+            return csv;
+        }
+
+        const data = [
+            { name: 'John', age: 30, city: 'New York' },
+            { name: 'Alice', age: 25, city: 'Los Angeles' },
+            { name: 'Bob', age: 35, city: 'Chicago' }
+        ];
+
+        const csvString = convertArrayOfObjectsToCSV(data);
+        console.log(csvString);
+
+        const csvOutputDiv = document.getElementById('csv-output');
+        csvOutputDiv.textContent = csvString;
+    </script>
+
+<div class="button-maindiv">
+
+    <div class="divbutton">
+        <a class="left" href="42_Compare_two_Objects..HTML">❮ Previous</a>
+    </div>
+
+    <div class="divbutton">
+        <a class="left" href="44_Capitalize_first_letter.HTML">Next ❯</a>
+    </div>
+
+</div>
+    
+</body>
+</html>

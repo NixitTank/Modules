@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Slider</title>
+    <style>
+      .slider-container {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  display: block;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h2>Create a slider using JavaScript</h2>
+
+    <div class="slider-container">
+        <div class="slider">
+          <img src="https://images.pexels.com/photos/33109/fall-autumn-red-season.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  alt="Image 1">
+          <img src="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  alt="Image 2">
+          <img src="https://images.pexels.com/photos/128234/pexels-photo-128234.jpeg" alt="Image 3">
+        </div>
+        <button id="prevBtn"><</button>
+        <button id="nextBtn">></button>
+      </div>
+      
+    <script>
+     let slideIndex = 0;
+showSlides();
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  slideIndex -= 1;
+  showSlides();
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  slideIndex += 1;
+  showSlides();
+});
+
+function showSlides() {
+  const slides = document.querySelectorAll(".slider img");
+  
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  } else if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  
+  slides.forEach((slide) => {
+    slide.style.display = "none";
+  });
+  
+  slides[slideIndex].style.display = "block";
+}
+
+    </script>
+
+<div class="button-maindiv">
+
+  <div class="divbutton">
+      <a class="left" href="66_ Enter_password.html">❮ Previous</a>
+  </div>
+
+  <div class="divbutton">
+      <a class="left" href="JS_Create_result.HTML">Next ❯</a>
+  </div>
+
+</div>
+    
+</body>
+</html>

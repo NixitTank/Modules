@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Button Click Alert</title>
+</head>
+<body>
+
+    <h2>15. Create a program that will select all the classes and loop over and whenever i click the
+        button the alert should show</h2>
+
+        <h4>Code:</h4>
+
+        <fieldset>
+            <pre>
+                &lt;button class="alert-button">Button 1&lt;/button>
+                &lt;button class="alert-button">Button 2&lt;/button>
+                &lt;button class="alert-button">Button 3&lt;/button>
+
+
+                &lt;script>
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const buttons = document.querySelectorAll('.alert-button');
+        
+                        buttons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                alert('Button clicked!');
+                            });
+                        });
+                    });
+        
+                &lt;/script>
+                
+            </pre>
+        </fieldset>
+
+        <br><br>    
+
+
+        <button class="alert-button">Button 1</button>
+        <button class="alert-button">Button 2</button>
+        <button class="alert-button">Button 3</button>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const buttons = document.querySelectorAll('.alert-button');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        alert('Button clicked!');
+                    });
+                });
+            });
+
+        </script>
+    
+</body>
+</html>

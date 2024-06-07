@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Parameter age</title>
+</head>
+<body>
+
+    <h2>5. The following function returns true if the parameter age is greater than
+        18. Otherwise it asks for a confirmation and returns its result:</h2>
+
+        <pre>
+            function
+            checkAge(age)
+            {
+            else {
+            }
+            }
+            if (age> 18) { return true; }
+            // ...return confirm (‘did parents allow you?');
+        </pre>
+
+
+        <h4>Code:</h4>
+
+
+        <fieldset>
+            <pre>
+                function checkAge(age) {
+                    if (age > 18) {
+                        return true;
+                    } else {
+                        return confirm('Did parents allow you?');
+                    }
+                }
+            </pre>
+        </fieldset>
+
+        <script>
+            function checkAge(age) {
+                if (age > 18) {
+                    return true;
+                } else {
+                    return confirm('Did parents allow you?');
+                }
+            }
+        </script>
+
+        <h4>Outptu:</h4>
+
+        <fieldset>
+                <ol type="1">
+                    <li>Age Greater Than 18:
+                        <ul>
+                            <li>console.log(checkAge(20)); // Output: true</li>
+                        </ul>
+                    </li>
+
+                    <li>Age Less Than or Equal to 18:
+                        <ul>
+                            <li>console.log(checkAge(15)); // Output: result of confirm('Did parents allow you?')
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Edge Case: Age Exactly 18:
+                        <ul>
+                            <li>console.log(checkAge(18)); // Output: result of confirm('Did parents allow you?')
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+        </fieldset>
+    
+</body>
+</html>

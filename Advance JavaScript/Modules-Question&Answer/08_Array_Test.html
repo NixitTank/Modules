@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Array Test</title>
+</head>
+<body>
+
+    <h2>8. Is array copied?</h2>
+
+    <pre>
+        let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let
+        shoppingCart = fruits; shoppingCart.push("Banana"); // what's in fruits?
+        alert( fruits.length ); // ?
+    </pre>
+
+    <h4>
+        Code:
+    </h4>
+
+    <fieldset>
+        <pre>
+            &lt;script>
+                let fruits = ["Apples", "Pear", "Orange"]; // Step 1: Define an array
+                let shoppingCart = fruits; // Step 2: Assign the reference of 'fruits' to 'shoppingCart'
+                shoppingCart.push("Banana"); // Step 3: Add "Banana" to the array through 'shoppingCart'
+                alert(fruits.length); // Step 4: Display the length of 'fruits'
+            &lt;/script>
+        </pre>
+    </fieldset>
+
+    <script>
+        let fruits = ["Apples", "Pear", "Orange"]; // Step 1: Define an array
+        let shoppingCart = fruits; // Step 2: Assign the reference of 'fruits' to 'shoppingCart'
+        shoppingCart.push("Banana"); // Step 3: Add "Banana" to the array through 'shoppingCart'
+        alert(fruits.length); // Step 4: Display the length of 'fruits'
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Current Date</title>
+</head>
+<body>
+
+    <h2>51) Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy </h2>
+
+    <p class="Example">Example :</p>
+
+    <fieldset>
+        <pre>
+
+            &lt;script>
+            
+                const today = new Date();
+                const month = today.getMonth() + 1;
+                const day = today.getDate();
+                const year = today.getFullYear();
+        
+                document.getElementById("Ans").innerHTML=day+"-"+month+"-"+year;
+        
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+    
+    <p class="Example">Output :</p>
+
+    <fieldset>
+        <p id="Ans"></p>
+    </fieldset>
+
+    <script>
+        const today = new Date();
+        const month = today.getMonth() + 1;
+        const day = today.getDate();
+        const year = today.getFullYear();
+
+        document.getElementById("Ans").innerHTML=day+"-"+month+"-"+year;
+
+    </script>
+
+<div class="button-maindiv">
+
+    <div class="divbutton">
+        <a class="left" href="50_declaring_methods.html">❮ Previous</a>
+    </div>
+
+    <div class="divbutton">
+        <a class="left" href="52_first_occurrence.html">Next ❯</a>
+    </div>
+
+</div>
+    
+</body>
+</html>

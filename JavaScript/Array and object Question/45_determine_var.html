@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Determine Var</title>
+</head>
+<body>
+
+    <h2>45. Write a JavaScript program to determine if a variable is array?</h2>
+
+
+    <fieldset>
+        <pre>
+
+            function isArray(variable) {
+                return Array.isArray(variable);
+              }
+              
+                  let testArray = [1, 2, 3];
+              let testVariable = "hello";
+              
+              console.log("Is testArray an array? " + isArray(testArray)); // Output: true
+              console.log("Is testVariable an array? " + isArray(testVariable)); // Output: false
+              
+
+        </pre>
+    </fieldset>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="44_Capitalize_first_letter.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="46_ JS_clone_array.html">Next ❯</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Map to Names</title>
+</head>
+<body>
+
+    <h2>9. Map to Names</h2>
+
+    <pre>
+        let john = { name: "John", age: 25 }; let pete = { name: "Pete", age: 30 }; let mary =
+        { name: "Mary", age: 28 }; let users = [ john, pete, mary ]; let names = /* ... your
+        code */ alert( names ); // John, Pete, Mary
+    </pre>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+            &lt;script>
+                let john = { name: "John", age: 25 };
+                let pete = { name: "Pete", age: 30 };
+                let mary = { name: "Mary", age: 28 };
+                let users = [john, pete, mary];
+        
+                let names = users.map(user => user.name);
+        
+                alert(names.join(", ")); // John, Pete, Mary
+            &lt;/script>
+        </pre>
+    </fieldset>
+
+    <script>
+        let john = { name: "John", age: 25 };
+        let pete = { name: "Pete", age: 30 };
+        let mary = { name: "Mary", age: 28 };
+        let users = [john, pete, mary];
+
+        let names = users.map(user => user.name);
+
+        alert(names.join(", ")); // John, Pete, Mary
+    </script>
+    
+</body>
+</html>

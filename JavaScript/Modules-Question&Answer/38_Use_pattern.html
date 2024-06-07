@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Use pattern</title>
+  </head>
+  <body>
+    <h2>38. Use pattern in console.log in JS?</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+            function printPattern(rows) {
+                for (let i = 1; i <= rows; i++) {
+                    let row = '';
+                    for (let j = 1; j <= i; j++) {
+                        if (j % 2 === 0) {
+                            row += '0 ';
+                        } else {
+                            row += '1 ';
+                        }
+                    }
+                    console.log(row);
+                }
+            }
+            
+            printPattern(5);
+            
+        </pre
+      >
+    </fieldset>
+
+    <h4>OutPut:</h4>
+
+    <fieldset>
+      <pre>
+            1 
+            1 0 
+            1 0 1 
+            1 0 1 0 
+            1 0 1 0 1 
+        </pre
+      >
+    </fieldset>
+
+    <br />
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+
+            function printAlphabetPattern(rows) {
+                let currentCharCode = 65; 
+                let alphabet = '';
+            
+                for (let i = 1; i <= rows; i++) {
+                    let row = '';
+                    for (let j = 1; j <= i; j++) {
+                        row += String.fromCharCode(currentCharCode) + ' ';
+                        currentCharCode++;
+                    }
+                    console.log(row);
+                }
+            }
+            
+            printAlphabetPattern(5);
+            
+
+        </pre
+      >
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+      <pre>
+            A 
+            B C 
+            D E F 
+            G H I J 
+            K L M N O 
+        </pre
+      >
+    </fieldset>
+
+    <br />
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+            function printNumberPattern(rows) {
+                let currentNumber = 1;
+            
+                for (let i = 1; i <= rows; i++) {
+                    let row = '';
+                    for (let j = 1; j <= i; j++) {
+                        row += currentNumber + ' ';
+                        currentNumber++;
+                    }
+                    console.log(row);
+                }
+            }
+            
+            printNumberPattern(5);
+        </pre
+      >
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+      <pre>
+            1 
+            2 3 
+            4 5 6 
+            7 8 9 10 
+            11 12 13 14 15 
+        </pre
+      >
+    </fieldset>
+
+    <br />
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+            function printStarPattern(rows) {
+                for (let i = 1; i <= rows; i++) {
+                    let row = '';
+                    for (let j = 1; j <= i; j++) {
+                        row += '* ';
+                    }
+                    console.log(row);
+                }
+            }
+            
+            printStarPattern(5);
+            
+        </pre
+      >
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+      <pre>
+            * 
+            * * 
+            * * * 
+            * * * * 
+            * * * * * 
+        </pre
+      >
+    </fieldset>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="37_Escape characters.HTML">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="39_palindrome.html">Next ❯</a>
+        </div>
+
+    </div>
+  </body>
+</html>

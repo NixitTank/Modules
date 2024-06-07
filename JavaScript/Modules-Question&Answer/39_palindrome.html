@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Palindrome</title>
+</head>
+<body>
+
+    <h2>39.  Accept 3 numbers from user using while loop and check each numbers palindrome? </h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+            function isPalindrome(number) {
+                const originalNumber = number;
+                let reversedNumber = 0;
+                while (number > 0) {
+                    const digit = number % 10;
+                    reversedNumber = reversedNumber * 10 + digit;
+                    number = Math.floor(number / 10);
+                }
+                return originalNumber === reversedNumber;
+            }
+            
+            function checkPalindromes() {
+                let count = 0;
+                while (count < 3) {
+                    const input = prompt(`Enter number ${count + 1}:`);
+                    const number = parseInt(input);
+                    if (!isNaN(number)) {
+                        if (isPalindrome(number)) {
+                            console.log(`${number} is a palindrome.`);
+                        } else {
+                            console.log(`${number} is not a palindrome.`);
+                        }
+                        count++;
+                    } else {
+                        console.log('Invalid input. Please enter a valid number.');
+                    }
+                }
+            }
+            
+            checkPalindromes();
+            
+        </pre>
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+        <pre>
+            Enter number 1: 121
+            121 is a palindrome.
+            Enter number 2: 123
+            123 is not a palindrome.
+            Enter number 3: 1221
+            1221 is a palindrome.
+        </pre>
+    </fieldset>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="38_Use_pattern.html">❮ Previous</a>
+        </div>
+
+        <div class="divbutton">
+            <a class="left" href="../Array and object Question/40_Current Day_Time.HTML">Next ❯</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

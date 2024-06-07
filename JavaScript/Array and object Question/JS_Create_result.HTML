@@ -59,6 +59,10 @@
             background-color: rgb(46, 227, 46);
         }
 
+        #total{
+            color: blue;
+        }
+
     </style>
 
 
@@ -109,7 +113,7 @@
 
             <br>
 
-            <h3 id="total">Total is :</h3>
+            <h3>Total is : <span id="total"></span> /700 </h3>
 
             <h3 id="Percentage">Percentage is :</h3>
 
@@ -134,14 +138,26 @@
 
             let percent = (Marks1 + Marks2 + Marks3 + Marks4 + Marks5 + Marks6 + Marks7) / 700 * 100;
             
-            document.getElementById("total").innerHTML="Total is :"+" "+ Total + "/700";
+            document.getElementById("total").innerHTML= Total;
 
-            document.getElementById("Percentage").innerHTML="Percentage is :" + " " + percent + "%" ;
+            document.getElementById("Percentage").innerHTML="Percentage is :" + " " + percent.toFixed(2) + "%" ;
 
         }
 
 
     </script>
+
+<div class="button-maindiv">
+
+    <div class="divbutton">
+        <a class="left" href="67_slider.html">❮ Previous</a>
+    </div>
+
+    <div class="divbutton">
+        <a class="left" href="JS_Math_Operation.HTML">Next ❯</a>
+    </div>
+
+</div>
     
 
     

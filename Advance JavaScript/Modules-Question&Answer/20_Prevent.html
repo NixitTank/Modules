@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Prevent Form Submission</title>
+</head>
+<body>
+
+    <h2>20. Prevent the browser when i click the form submit button</h2>
+
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+                &lt;form id="myForm">
+                    &lt;input type="text" name="name" placeholder="Name" required>
+                    &lt;button type="submit">Submit&lt;/button>
+                &lt;/form>
+            
+            &lt;script>
+                document.getElementById('myForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    alert("Form submission prevented!");
+                });
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+
+    <h4>Output:</h4>
+
+    <fieldset>
+        <form id="myForm">
+            <input type="text" name="name" placeholder="Name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+    
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Form submission prevented!");
+        });
+    </script>
+    
+</body>
+</html>
