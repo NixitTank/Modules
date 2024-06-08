@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Promise</title>
+</head>
+<body>
+
+    <h2>22. What is promises</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+
+            &lt;button id="fetchDataButton">Fetch Data&lt;/button>
+            &lt;div id="dataDisplay">&lt;/div>
+
+
+            
+    &lt;script>
+        document.getElementById('fetchDataButton').addEventListener('click', () => {
+            fetchData();
+        });
+
+        function fetchData() {
+            const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayData(data);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                    document.getElementById('dataDisplay').textContent = 'Failed to fetch data';
+                })
+                .finally(() => {
+                    console.log('Fetch attempt finished.');
+                });
+        }
+
+        function displayData(data) {
+            const dataDisplay = document.getElementById('dataDisplay');
+            dataDisplay.innerHTML = '';
+
+            data.forEach(item => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                postElement.innerHTML = `
+                    &lt;h3>${item.title}&lt;/h3>
+                    &lt;p>${item.body}&lt;/p>
+                `;
+                dataDisplay.appendChild(postElement);
+            });
+        }
+    &lt;/script>
+
+
+        </pre>
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+        <button id="fetchDataButton">Fetch Data</button>
+    </fieldset>
+    <div id="dataDisplay"></div>
+
+
+    <script>
+        document.getElementById('fetchDataButton').addEventListener('click', () => {
+            fetchData();
+        });
+
+        function fetchData() {
+            const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayData(data);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                    document.getElementById('dataDisplay').textContent = 'Failed to fetch data';
+                })
+                .finally(() => {
+                    console.log('Fetch attempt finished.');
+                });
+        }
+
+        function displayData(data) {
+            const dataDisplay = document.getElementById('dataDisplay');
+            dataDisplay.innerHTML = '';
+
+            data.forEach(item => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                postElement.innerHTML = `
+                    <h3>${item.title}</h3>
+                    <p>${item.body}</p>
+                `;
+                dataDisplay.appendChild(postElement);
+            });
+        }
+    </script>
+
+<div class="button-maindiv">
+
+    <div class="divbutton">
+        <a class="left" href="21_JSON.html">❮ Previous</a>
+    </div>
+
+    <div class="divbutton">
+        <a class="left" href="23_Promises2.html">Next ❯</a>
+    </div>
+
+</div>
+
+
+</body>
+</html>

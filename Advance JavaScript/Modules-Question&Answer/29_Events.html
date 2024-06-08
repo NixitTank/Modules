@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Events</title>
+
+    <style>
+      #clickButton,
+      #hoverDiv,
+      #keyInput,
+      #submitForm,
+      #loadImage {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>29. How to used JavaScript Events to do all examples?</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+
+               <!-- Click Event -->
+               &lt;button id="clickButton">Click me&lt;/button>
+
+                <!-- Mouseover Event -->
+                &lt;div id="hoverDiv">Hover over me&lt;/div>
+
+                <!-- Keydown Event -->
+                &lt;input type="text" id="keyInput" placeholder="Press any key" />
+
+                <!-- Submit Event -->
+                &lt;form id="submitForm">
+                    &lt;input type="text" />
+                    &lt;input type="submit" />
+                &lt;/form>
+
+                <!-- Load Event -->
+                &lt;img id="loadImage" src=""/>
+
+
+
+                &lt;script>
+                    // Click Event
+                    document.getElementById("clickButton").onclick = function () {
+                      alert("Button clicked!");
+                    };
+              
+                    // Mouseover Event
+                    document.getElementById("hoverDiv").onmouseover = function () {
+                      alert("Mouse over!");
+                    };
+              
+                    // Keydown Event
+                    document.getElementById("keyInput").onkeydown = function (event) {
+                      alert("Key pressed: " + event.key);
+                    };
+              
+                    // Submit Event
+                    document.getElementById("submitForm").onsubmit = function (event) {
+                      event.preventDefault(); // Prevent form submission
+                      alert("Form submitted!");
+                    };
+              
+                    // Load Event
+                    document.getElementById("loadImage").onload = function () {
+                      alert("Image loaded!");
+                    };
+              
+                    // Resize Event
+                    window.onresize = function () {
+                      alert("Window resized!");
+                    };
+              
+                    // Scroll Event
+                    window.onscroll = function () {
+                      alert("Scrolled!");
+                    };
+                &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <fieldset>
+      <!-- Click Event -->
+      <button id="clickButton">Click me</button>
+
+      <!-- Mouseover Event -->
+      <div id="hoverDiv">Hover over me</div>
+
+      <!-- Keydown Event -->
+      <input type="text" id="keyInput" placeholder="Press any key" />
+
+      <!-- Submit Event -->
+      <form id="submitForm">
+        <input type="text" />
+        <input type="submit" />
+      </form>
+
+      <!-- Load Event -->
+      <img
+        id="loadImage"
+        src="https://images.unsplash.com/photo-1631631480669-535cc43f2327?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        width="100px"
+      />
+    </fieldset>
+
+    <script>
+      // Click Event
+      document.getElementById("clickButton").onclick = function () {
+        alert("Button clicked!");
+      };
+
+      // Mouseover Event
+      document.getElementById("hoverDiv").onmouseover = function () {
+        alert("Mouse over!");
+      };
+
+      // Keydown Event
+      document.getElementById("keyInput").onkeydown = function (event) {
+        alert("Key pressed: " + event.key);
+      };
+
+      // Submit Event
+      document.getElementById("submitForm").onsubmit = function (event) {
+        event.preventDefault(); // Prevent form submission
+        alert("Form submitted!");
+      };
+
+      // Load Event
+      document.getElementById("loadImage").onload = function () {
+        alert("Image loaded!");
+      };
+
+      // Resize Event
+      window.onresize = function () {
+        alert("Window resized!");
+      };
+
+      //   // Scroll Event
+      window.onscroll = function () {
+        alert("Scrolled!");
+      };
+    </script>
+
+<div class="button-maindiv">
+
+  <div class="divbutton">
+      <a class="left" href="27_28_Output_Methods.html">❮ Previous</a>
+  </div>
+
+  
+
+</div>
+  </body>
+</html>

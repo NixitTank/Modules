@@ -43,8 +43,112 @@
     
                 In most languages, this is realized as an array, vector, list, or sequence.
         </li>
+
+        <b>
+            3. Syntax Rules:
+        </b>
+
+        <li>
+            <b>Objects:</b>
+            Represented as name/value pairs enclosed in curly braces {}. Each name is followed by a colon : and the name/value pairs are separated by commas.
+        </li>
+
+        <fieldset>
+            <pre>
+                {
+                    "name": "John",
+                    "age": 30,
+                    "city": "New York"
+                  }
+            </pre>
+        </fieldset>
+
+        <li>
+            <b>
+                Arrays:
+            </b> Ordered collections of values enclosed in square brackets [] and separated by commas.
+        </li>
+
+        <fieldset>
+            <pre>
+                ["apple", "banana", "cherry"]
+            </pre>
+        </fieldset>
+
+        <li>
+            <b>
+                Values:
+            </b>Can be strings (in double quotes), numbers, objects, arrays, true, false, or null.
+        </li>
+
+        <li>
+            <b>
+                Strings: 
+            </b>Must be enclosed in double quotes and can contain escape characters.
+        </li>
+
+        <fieldset>
+            <pre>
+                "name": "John"
+            </pre>
+        </fieldset>
+
+        <li>
+            <b>Numbers:</b>Can be integers or floating-point numbers.
+        </li>
+
+        <fieldset>
+            <pre>"age": 30
+            </pre>
+        </fieldset>
     </p>
 
+    <h4>Use Cases:</h4>
+
+    <ul>
+        <li><b>Web APIs: </b>JSON is commonly used to exchange data between a server and web application.</li>
+        <li><b>Configuration Files:</b> Many software applications use JSON format for configuration settings.</li>
+        <li><b>Data Storage: </b>Some NoSQL databases, like MongoDB, use a JSON-like format (BSON) to store data.</li>
+    </ul>
+
+
+    <h3>Example:</h3>
+
+    <p>
+        Here is a complete JSON example representing a person with a name, age, and list of favorite fruits:
+    </p>
+
+    <fieldset>
+        <pre>
+          
+            {
+                "name": "John",
+                "age": 30,
+                "isEmployed": true,
+                "address": {
+                  "street": "123 Main St",
+                  "city": "New York",
+                  "zipcode": "10001"
+                },
+                "favoriteFruits": ["apple", "banana", "cherry"]
+              }
+              
+
+        </pre>
+    </fieldset>
+
+    <div class="button-maindiv">
+
+        <div class="divbutton">
+            <a class="left" href="20_Prevent.html">❮ Previous</a>
+        </div>
+  
+        <div class="divbutton">
+            <a class="left" href="22_Promise.html">Next ❯</a>
+        </div>
+  
+    </div>
+  
     
         
 

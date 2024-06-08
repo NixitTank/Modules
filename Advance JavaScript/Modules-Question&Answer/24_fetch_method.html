@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>fetch method</title>
+  </head>
+  <body>
+    <h2>
+      24. Use fetch method for calling an api https://fakestoreapi.com/products
+    </h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+        
+            fetch('https://fakestoreapi.com/products')
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+              })
+              .then(data => {
+                console.log(data);
+              })
+              .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+              });
+
+        </pre
+      >
+    </fieldset>
+
+    <script>
+      fetch("https://fakestoreapi.com/products")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(
+              "Network response was not ok " + response.statusText
+            );
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error("There was a problem with the fetch operation:", error);
+        });
+    </script>
+
+<div class="button-maindiv">
+
+  <div class="divbutton">
+      <a class="left" href="23_Promises2.html">❮ Previous</a>
+  </div>
+
+  <div class="divbutton">
+      <a class="left" href="25_Fake_Store_Products.html">Next ❯</a>
+  </div>
+
+</div>
+
+  </body>
+</html>

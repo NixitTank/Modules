@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Common.CSS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
     <title>Sum Salaries</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>
+      11. Sum the properties There is a salaries object with arbitrary number of
+      salaries. Write the function sumSalaries(salaries) that returns the sum of
+      all salaries using Object.values and the for..of loop.If salaries is
+      empty, then the result must be 0.
+    </h2>
 
-    <h2>11. Sum the properties There is a salaries object with arbitrary number of salaries. Write
-        the function sumSalaries(salaries) that returns the sum of all salaries using
-        Object.values and the for..of loop.If salaries is empty, then the result must be 0.</h2>
-
-        <pre>
+    <pre>
             let salaries = {
                 "John": 100,
                 "Pete": 300,
                 "Mary": 250
                 };
                 alert( sumSalaries(salaries) ); // 650
-        </pre>
+        </pre
+    >
 
-        <h4>Code:</h4>
+    <h4>Code:</h4>
 
-        <fieldset>
-            <pre>
+    <fieldset>
+      <pre>
 
                 &lt;div>
                     &lt;h1>Sum of Salaries&lt;/h1>
@@ -51,37 +54,47 @@
                     });
                 &lt;/script>
 
-            </pre>
-        </fieldset>
+            </pre
+      >
+    </fieldset>
 
-        <h4>Output:</h4>
+    <h4>Output:</h4>
 
-        <fieldset>
-            <div>
-                <h1>Sum of Salaries</h1>
-                <p>The sum of salaries is: <span id="result"></span></p>
-            </div>
-        </fieldset>
+    <fieldset>
+      <div>
+        <h1>Sum of Salaries</h1>
+        <p>The sum of salaries is: <span id="result"></span></p>
+      </div>
+    </fieldset>
 
-        <script>
-            function sumSalaries(salaries) {
-              let total = 0;
-              for (let salary of Object.values(salaries)) {
-                total += salary;
-              }
-              return total;
-            }
-        
-            let salaries = {
-              "John": 100,
-              "Pete": 300,
-              "Mary": 250
-            };
-        
-            document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('result').textContent = sumSalaries(salaries);
-            });
-          </script>
-    
-</body>
+    <script>
+      function sumSalaries(salaries) {
+        let total = 0;
+        for (let salary of Object.values(salaries)) {
+          total += salary;
+        }
+        return total;
+      }
+
+      let salaries = {
+        John: 100,
+        Pete: 300,
+        Mary: 250,
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("result").textContent = sumSalaries(salaries);
+      });
+    </script>
+
+    <div class="button-maindiv">
+      <div class="divbutton">
+        <a class="left" href="10_Map_to_Objects.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+        <a class="left" href="12_Destructuring.html">Next ❯</a>
+      </div>
+    </div>
+  </body>
 </html>

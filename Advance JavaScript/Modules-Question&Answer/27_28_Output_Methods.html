@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Output Methods</title>
+</head>
+<body>
+
+    <h2>27. What isJavaScript Output method?</h2>
+
+    <h2>28. How to used JavaScript Output method?   </h2>
+
+    <h3>Explanation:
+    </h3>
+
+    <ol>
+        <li>
+            <b>console.log():</b>This will log a message to the browser's console. Open the browser’s developer tools (F12) to see the console output.
+        </li>
+
+        <li>
+            <b>document.write(): </b>This writes directly to the document. Note that using document.write() after the document is fully loaded can overwrite the entire page.
+        </li>
+
+        <li>
+            <b>innerHTML: </b>This changes the content of the element with the ID output.
+        </li>
+
+        <li>
+            <b>alert():</b>This will show an alert box with the specified message.
+        </li>
+
+        <li>
+            <b>confirm():</b>This will show a confirmation box, and the result (OK or Cancel) will be logged to the console.
+        </li>
+
+        <li>
+            <b>prompt():</b>This will show a prompt box asking for the user's name, and the input will be displayed on the document.
+        </li>
+    </ol>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+
+                &lt;div id="output">This will be changed by JavaScript&lt;/div>
+
+                &lt;script>
+                    // console.log() example
+                    console.log("This is a message for the console.");
+
+                    // document.write() example
+                    document.write("This text is written by document.write().");
+
+                    // innerHTML example
+                    document.getElementById("output").innerHTML = "This text is set by innerHTML.";
+
+                    // alert() example
+                    alert("This is an alert box!");
+
+                    // confirm() example
+                    if (confirm("Do you like JavaScript?")) {
+                        console.log("User likes JavaScript.");
+                    } else {
+                        console.log("User does not like JavaScript.");
+                    }
+
+                    // prompt() example
+                    var userName = prompt("Please enter your name:", "Harry Potter");
+                    if (userName != null) {
+                        document.write("<br>Hello, " + userName + "!");
+                    }
+                &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <h4>
+        Output:
+    </h4>
+
+        <!-- Example for innerHTML -->
+    <div id="output">This will be changed by JavaScript.</div>
+
+    <script>
+        // console.log() example
+        console.log("This is a message for the console.");
+
+        // document.write() example
+        document.write("This text is written by document.write().");
+
+        // innerHTML example
+        document.getElementById("output").innerHTML = "This text is set by innerHTML.";
+
+        // alert() example
+        alert("This is an alert box!");
+
+        // confirm() example
+        if (confirm("Do you like JavaScript?")) {
+            console.log("User likes JavaScript.");
+        } else {
+            console.log("User does not like JavaScript.");
+        }
+
+        // prompt() example
+        var userName = prompt("Please enter your name:", "Harry Potter");
+        if (userName != null) {
+            document.write("<br>Hello, " + userName + "!");
+        }
+    </script>
+
+<div class="button-maindiv">
+
+    <div class="divbutton">
+        <a class="left" href="25_Fake_Store_Products.html">❮ Previous</a>
+    </div>
+
+    <div class="divbutton">
+        <a class="left" href="29_Events.html">Next ❯</a>
+    </div>
+
+</div>
+
+    
+</body>
+</html>

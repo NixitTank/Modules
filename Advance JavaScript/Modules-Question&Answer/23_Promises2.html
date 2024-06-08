@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Promises</title>
+
+    <style>
+      .message {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .success {
+        background-color: #e0ffe0;
+        color: #006600;
+      }
+      .error {
+        background-color: #ffe0e0;
+        color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>23. Write a program of promises and handle that promises also</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+
+            &lt;p id="status">Fetching user data...&lt;/p>
+            &lt;div id="result" class="message">&lt;/div>
+
+
+            &lt;script>
+
+                function fetchUserData(userId) {
+                    return new Promise((resolve, reject) => {
+                        console.log(`Fetching data for user with ID: ${userId}...`);
+                
+                        
+                        setTimeout(() => {
+                            const success = Math.random() > 0.2; 
+                
+                            if (success) {
+                                const userData = {
+                                    id: userId,
+                                    name: "John Doe",
+                                    email: "john.doe@example.com"
+                                };
+                                resolve(userData);
+                            } else {
+                                reject(`Failed to fetch data for user with ID: ${userId}`);            }
+                        }, 2000); 
+                    });
+                }
+                
+                
+                fetchUserData(1)
+                    .then(userData => {
+                        console.log("User data fetched successfully:", userData);
+                        document.getElementById('status').textContent = "User data fetched successfully!";
+                        document.getElementById('result').textContent = JSON.stringify(userData, null, 2);
+                        document.getElementById('result').className += " success";
+                    })
+                    .catch(error => {
+                        console.error("Error fetching user data:", error);
+                        document.getElementById('status').textContent = "Error fetching user data!";
+                        document.getElementById('result').textContent = error;
+                        document.getElementById('result').className += " error";
+                    });
+                &lt;/script>
+
+        </pre
+      >
+    </fieldset>
+
+    <h4>OutPut:</h4>
+
+    <fieldset>
+      <p id="status">Fetching user data...</p>
+      <div id="result" class="message"></div>
+    </fieldset>
+
+    <script>
+      function fetchUserData(userId) {
+        return new Promise((resolve, reject) => {
+          console.log(`Fetching data for user with ID: ${userId}...`);
+
+          setTimeout(() => {
+            const success = Math.random() > 0.2;
+
+            if (success) {
+              const userData = {
+                id: userId,
+                name: "John Doe",
+                email: "john.doe@example.com",
+              };
+              resolve(userData);
+            } else {
+              reject(`Failed to fetch data for user with ID: ${userId}`);
+            }
+          }, 2000);
+        });
+      }
+
+      fetchUserData(1)
+        .then((userData) => {
+          console.log("User data fetched successfully:", userData);
+          document.getElementById("status").textContent =
+            "User data fetched successfully!";
+          document.getElementById("result").textContent = JSON.stringify(
+            userData,
+            null,
+            2
+          );
+          document.getElementById("result").className += " success";
+        })
+        .catch((error) => {
+          console.error("Error fetching user data:", error);
+          document.getElementById("status").textContent =
+            "Error fetching user data!";
+          document.getElementById("result").textContent = error;
+          document.getElementById("result").className += " error";
+        });
+    </script>
+
+    <div class="button-maindiv">
+      <div class="divbutton">
+        <a class="left" href="22_Promise.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+        <a class="left" href="24_fetch_method.html">Next ❯</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Common.CSS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
     <title>Map to Objects</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h2>10. Map to Objects</h2>
 
     <pre>
@@ -26,7 +25,7 @@
     <h4>Code:</h4>
 
     <fieldset>
-        <pre>
+      <pre>
             &lt;script>
                 let john = { name: "John", surname: "Smith", id: 1 };
                 let pete = { name: "Pete", surname: "Hunt", id: 2 };
@@ -42,24 +41,34 @@
                 alert(usersMapped[0].id); // 1
                 alert(usersMapped[0].fullName); // John Smith
             &lt;/script>
-        </pre>
+        </pre
+      >
     </fieldset>
 
     <script>
-        let john = { name: "John", surname: "Smith", id: 1 };
-        let pete = { name: "Pete", surname: "Hunt", id: 2 };
-        let mary = { name: "Mary", surname: "Key", id: 3 };
+      let john = { name: "John", surname: "Smith", id: 1 };
+      let pete = { name: "Pete", surname: "Hunt", id: 2 };
+      let mary = { name: "Mary", surname: "Key", id: 3 };
 
-        let users = [john, pete, mary];
+      let users = [john, pete, mary];
 
-        let usersMapped = users.map(user => ({
-            fullName: `${user.name} ${user.surname}`,
-            id: user.id
-        }));
+      let usersMapped = users.map((user) => ({
+        fullName: `${user.name} ${user.surname}`,
+        id: user.id,
+      }));
 
-        alert(usersMapped[0].id); // 1
-        alert(usersMapped[0].fullName); // John Smith
+      alert(usersMapped[0].id); // 1
+      alert(usersMapped[0].fullName); // John Smith
     </script>
-    
-</body>
+
+    <div class="button-maindiv">
+      <div class="divbutton">
+        <a class="left" href="09_Map_to_Names.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+        <a class="left" href="11_Sum_Salaries.html">Next ❯</a>
+      </div>
+    </div>
+  </body>
 </html>

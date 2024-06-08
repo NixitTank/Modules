@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Common.CSS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
     <title>Button Click Alert</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>
+      15. Create a program that will select all the classes and loop over and
+      whenever i click the button the alert should show
+    </h2>
 
-    <h2>15. Create a program that will select all the classes and loop over and whenever i click the
-        button the alert should show</h2>
+    <h4>Code:</h4>
 
-        <h4>Code:</h4>
-
-        <fieldset>
-            <pre>
+    <fieldset>
+      <pre>
                 &lt;button class="alert-button">Button 1&lt;/button>
                 &lt;button class="alert-button">Button 2&lt;/button>
                 &lt;button class="alert-button">Button 3&lt;/button>
@@ -34,29 +35,36 @@
         
                 &lt;/script>
                 
-            </pre>
-        </fieldset>
+            </pre
+      >
+    </fieldset>
 
-        <br><br>    
+    <br /><br />
 
+    <button class="alert-button">Button 1</button>
+    <button class="alert-button">Button 2</button>
+    <button class="alert-button">Button 3</button>
 
-        <button class="alert-button">Button 1</button>
-        <button class="alert-button">Button 2</button>
-        <button class="alert-button">Button 3</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".alert-button");
 
-        <script>
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            alert("Button clicked!");
+          });
+        });
+      });
+    </script>
 
-            document.addEventListener('DOMContentLoaded', () => {
-                const buttons = document.querySelectorAll('.alert-button');
+    <div class="button-maindiv">
+      <div class="divbutton">
+        <a class="left" href="14_Show_Hide_Password.html">❮ Previous</a>
+      </div>
 
-                buttons.forEach(button => {
-                    button.addEventListener('click', () => {
-                        alert('Button clicked!');
-                    });
-                });
-            });
-
-        </script>
-    
-</body>
+      <div class="divbutton">
+        <a class="left" href="16_Responsive_Header.html">Next ❯</a>
+      </div>
+    </div>
+  </body>
 </html>

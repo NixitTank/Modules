@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Common.CSS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
     <title>Destructuring</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>
+      12. Destructuring assignment We have an object: Write the Destructuring
+      assignment that reads:
+    </h2>
 
-    <h2>12. Destructuring assignment We have an object: Write the Destructuring assignment that
-        reads:</h2>
-
-        <pre>
+    <pre>
             a) Name property into the variable name.
             b) Year’s property into the variable age.
             c) isAdmin property into the variable isAdmin (false, if no such property)
             d) let user = { name: "John", years: 30};
-        </pre>
+        </pre
+    >
 
-        <h4>
-            Code:
-        </h4>
+    <h4>Code:</h4>
 
-        <fieldset>
-            <pre>
+    <fieldset>
+      <pre>
                 let user = { name: "John", years: 30 };
 
                 let { name, years: age, isAdmin = false } = user;
@@ -31,18 +31,28 @@
                 console.log(name);  // "John"
                 console.log(age);   // 30
                 console.log(isAdmin);  // false
-            </pre>
-        </fieldset>
+            </pre
+      >
+    </fieldset>
 
-        <script>
-            let user = { name: "John", years: 30 };
+    <script>
+      let user = { name: "John", years: 30 };
 
-            let { name, years: age, isAdmin = false } = user;
+      let { name, years: age, isAdmin = false } = user;
 
-            console.log(name);  // "John"
-            console.log(age);   // 30
-            console.log(isAdmin);  // false
-        </script>
-    
-</body>
+      console.log(name); // "John"
+      console.log(age); // 30
+      console.log(isAdmin); // false
+    </script>
+
+    <div class="button-maindiv">
+      <div class="divbutton">
+        <a class="left" href="11_Sum_Salaries.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+        <a class="left" href="13_JSON_Conversion.html">Next ❯</a>
+      </div>
+    </div>
+  </body>
 </html>

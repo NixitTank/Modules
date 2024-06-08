@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Fake Store Products</title>
+
+    <style>
+         .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .product img {
+            max-width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>25. Display all the product from the api in your HTML page</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+
+            &lt;div id="products">&lt;/div>
+
+            
+    &lt;script>
+        fetch('https://fakestoreapi.com/products')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const productsDiv = document.getElementById('products');
+                data.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+
+                    const productTitle = document.createElement('h3');
+                    productTitle.textContent = product.title;
+
+                    const productImage = document.createElement('img');
+                    productImage.src = product.image;
+                    productImage.alt = product.title;
+
+                    const productPrice = document.createElement('p');
+                    productPrice.textContent = `Price: $${product.price}`;
+
+                    const productDescription = document.createElement('p');
+                    productDescription.textContent = product.description;
+
+                    productDiv.appendChild(productTitle);
+                    productDiv.appendChild(productImage);
+                    productDiv.appendChild(productPrice);
+                    productDiv.appendChild(productDescription);
+
+                    productsDiv.appendChild(productDiv);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <h4>Output:</h4>
+
+    <div id="products"></div>
+
+    <script>
+        fetch('https://fakestoreapi.com/products')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const productsDiv = document.getElementById('products');
+                data.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+
+                    const productTitle = document.createElement('h3');
+                    productTitle.textContent = product.title;
+
+                    const productImage = document.createElement('img');
+                    productImage.src = product.image;
+                    productImage.alt = product.title;
+
+                    const productPrice = document.createElement('p');
+                    productPrice.textContent = `Price: $${product.price}`;
+
+                    const productDescription = document.createElement('p');
+                    productDescription.textContent = product.description;
+
+                    productDiv.appendChild(productTitle);
+                    productDiv.appendChild(productImage);
+                    productDiv.appendChild(productPrice);
+                    productDiv.appendChild(productDescription);
+
+                    productsDiv.appendChild(productDiv);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+
+<div class="button-maindiv">
+
+    <div class="divbutton">
+        <a class="left" href="24_fetch_method.html">❮ Previous</a>
+    </div>
+
+    <div class="divbutton">
+        <a class="left" href="27_28_Output_Methods.html">Next ❯</a>
+    </div>
+
+</div>
+
+    
+</body>
+</html>
