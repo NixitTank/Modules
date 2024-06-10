@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Counter</title>
+
+    <style>
+
+    #counter {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 5px 10px;
+        font-size: 16px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    </style>
+
+
+</head>
+<body>
+
+    <h2>11. Create Increment decrement state change by button click?</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+
+            &lt;div id="counter">0&lt;/div>
+            &lt;button id="increment">Increment&lt;/button>
+            &lt;button id="decrement">Decrement&lt;/button>
+            &lt;button id="reset">Reset&lt;/button>
+
+
+            &lt;script>
+                const counter = document.getElementById('counter');
+                const incrementBtn = document.getElementById('increment');
+                const decrementBtn = document.getElementById('decrement');
+                const resetBtn = document.getElementById('reset');
+            
+                let count = 0;
+            
+                function updateCounter() {
+                    counter.textContent = count;
+                }
+            
+                function increment() {
+                    count++;
+                    updateCounter();
+                }
+            
+                function decrement() {
+                    count--;
+                    updateCounter();
+                }
+            
+                function reset() {
+                    count = 0;
+                    updateCounter();
+                }
+            
+                incrementBtn.addEventListener('click', increment);
+                decrementBtn.addEventListener('click', decrement);
+                resetBtn.addEventListener('click', reset);
+            &lt;/script>
+
+        </pre>
+    </fieldset>
+
+    <h4>OutPut:</h4>
+
+    <fieldset>
+        <div id="counter">0</div>
+        <button id="increment">Increment</button>
+        <button id="decrement">Decrement</button>
+        <button id="reset">Reset</button>
+    </fieldset>
+
+    <script>
+    const counter = document.getElementById('counter');
+    const incrementBtn = document.getElementById('increment');
+    const decrementBtn = document.getElementById('decrement');
+    const resetBtn = document.getElementById('reset');
+
+    let count = 0;
+
+    function updateCounter() {
+        counter.textContent = count;
+    }
+
+    function increment() {
+        count++;
+        updateCounter();
+    }
+
+    function decrement() {
+        count--;
+        updateCounter();
+    }
+
+    function reset() {
+        count = 0;
+        updateCounter();
+    }
+
+    incrementBtn.addEventListener('click', increment);
+    decrementBtn.addEventListener('click', decrement);
+    resetBtn.addEventListener('click', reset);
+</script>
+
+<div class="button-maindiv">
+
+    <div class="divbutton">
+        <a class="left" href="10_List_View.html">❮ Previous</a>
+    </div>
+
+</div>
+
+
+    
+</body>
+</html>

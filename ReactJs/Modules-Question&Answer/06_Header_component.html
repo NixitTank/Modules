@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Header component</title>
+  </head>
+  <body>
+    <h2>6. What is Header and Content Components in React Js?</h2>
+
+    <h3>Header Component</h3>
+
+    <p>
+      A Header component is usually the top section of a web page or application
+      and contains elements like the logo, navigation links, search bars, and
+      other important links or buttons. The Header component often remains
+      constant across different pages of the application, providing a consistent
+      navigation and branding experience.
+    </p>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+      <pre>
+            import React from 'react';
+
+            const Header = () => {
+              return (
+                &lt;header>
+                    &lt;nav>
+                        &lt;ul>
+                            &lt;li>&lt;a href="/">Home&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="/about">About&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="/contact">Contact&lt;/a>&lt;/li>
+                        &lt;/ul>
+                    &lt;/nav>
+                &lt;/header>
+              );
+            };
+
+            export default Header;
+
+        </pre>
+    </fieldset>
+
+    <br>
+
+    <h4>Content Component
+    </h4>
+
+    <p>
+        A Content component typically refers to the main area of the page where the primary information or features are displayed. This could include articles, data tables, forms, or any other type of content that varies from page to page within the application.
+    </p>
+
+    <h3>Code:</h3>
+
+    <fieldset>
+        <pre>
+            import React from 'react';
+
+            const Content = ({ children }) => {
+              return (
+                &lt;main>
+                  {children}
+                &lt;/main>
+              );
+            };
+
+            export default Content;
+
+        </pre>
+    </fieldset>
+
+    <h4>Usage
+    </h4>
+
+    <p>
+        These components can be used together in a parent component to form a structured page layout. For example:
+    </p>
+
+    <h3>Code:</h1>
+
+        <fieldset>
+            <pre>
+                import React from 'react';
+                import Header from './Header';
+                import Content from './Content';
+
+                const App = () => {
+                  return (
+                    &lt;div>
+                        &lt;Header />
+                            &lt;Content>
+                                &lt;h1>Welcome to My Website</h1>
+                                &lt;p>This is the main content of the page.</p>
+                            &lt;/Content>
+                        &lt;/div>
+                  );
+                };
+
+                export default App;
+
+            </pre>
+        </fieldset>
+
+        <div class="button-maindiv">
+
+          <div class="divbutton">
+              <a class="left" href="05_Components.html">❮ Previous</a>
+          </div>
+  
+          <div class="divbutton">
+              <a class="left" href="07_Install_React.html">Next ❯</a>
+          </div>
+  
+      </div>
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Common.CSS">
+    <title>Change Components</title>
+</head>
+<body>
+
+    <h2>9. How to change in components of React Js?</h2>
+
+    <h4>Code:</h4>
+
+    <fieldset>
+        <pre>
+
+            import React, { Component } from 'react';
+
+                class MyComponent extends Component {
+                  constructor(props) {
+                    super(props);
+                    this.state = {
+                      message: 'Hello, World!'
+                    };
+                  }
+              
+                  changeMessage = () => {
+                    this.setState({ message: 'Hello, React!' });
+                  }
+              
+                  render() {
+                    return (
+                      &lt;div>
+                        &lt;h1>{this.state.message}&lt;/h1>
+                        &lt;button onClick={this.changeMessage}>Change Message&lt;/button>
+                    &lt;/div>
+                    );
+                  }
+                }
+
+                export default MyComponent;
+
+        </pre>
+    </fieldset>
+
+    <div class="button-maindiv">
+
+      <div class="divbutton">
+          <a class="left" href="08_check_version.html">❮ Previous</a>
+      </div>
+
+      <div class="divbutton">
+          <a class="left" href="10_List_View.html">Next ❯</a>
+      </div>
+
+  </div>
+    
+</body>
+</html>
