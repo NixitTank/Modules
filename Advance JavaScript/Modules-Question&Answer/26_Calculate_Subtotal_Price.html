@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Common.CSS" />
+    <title>Calculate Subtotal Price</title>
+
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      table tr > td {
+        padding: 15px;
+      }
+
+      button {
+        background-color: rgb(235, 7, 7);
+        border: none;
+        padding: 5px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>26. Calculate subtotal price of quantity in JavaScript?</h2>
+
+    <table border="1">
+      <tr>
+        <th>Product Info</th>
+        <th>Quantity</th>
+        <th>Price(per unit)</th>
+        <th>Price(subtotal)</th>
+        <th></th>
+      </tr>
+
+      <tr>
+        <td>
+          <img
+            src="https://media.istockphoto.com/id/610765164/photo/new-potato.jpg?s=612x612&w=0&k=20&c=bSfq7ykW8Ztp7uU5cBvuOIaHZMD_I1XeToLalhGQWMY="
+            width="100px"
+            alt=""
+          />Potato
+        </td>
+        <td><input id="i_Quantity1" type="number" /></td>
+        <td><span id="per_unit1">58</span></td>
+        <td><span id="subtotal1">0 Rs</span></td>
+        <td><button class="remove-btn">Remove</button></td>
+      </tr>
+
+      <tr>
+        <td>
+          <img
+            src="https://media.istockphoto.com/id/941825878/photo/tomato-with-slice-isolated-with-clipping-path.jpg?s=612x612&w=0&k=20&c=P3PQlDAxzgx5i1hGCHKEcBy-rZmqn4f5CZPggWnh9yQ="
+            width="100px"
+            alt=""
+          />Tamatar
+        </td>
+        <td><input id="i_Quantity2" type="number" /></td>
+        <td><span id="per_unit2">40</span></td>
+        <td><span id="subtotal2">0 Rs</span></td>
+        <td><button class="remove-btn">Remove</button></td>
+      </tr>
+
+      <tr>
+        <td>
+          <img
+            src="https://img.freepik.com/premium-photo/red-onion-cutting-board-kitchen_505557-10478.jpg"
+            width="100px"
+            alt=""
+          />Onion
+        </td>
+        <td><input id="i_Quantity3" type="number" /></td>
+        <td><span id="per_unit3">50</span></td>
+        <td><span id="subtotal3">0 Rs</span></td>
+        <td><button class="remove-btn">Remove</button></td>
+      </tr>
+
+      <tr>
+        <td>
+          <img
+            src="https://www.jiomart.com/images/product/original/590003533/green-chilli-200-g-product-images-o590003533-p590003533-0-202203150435.jpg?im=Resize=(1000,1000)"
+            width="100px"
+            alt=""
+          />Green Chilli
+        </td>
+        <td><input id="i_Quantity4" type="number" /></td>
+        <td><span id="per_unit4">27</span></td>
+        <td><span id="subtotal4">0 Rs</span></td>
+        <td><button class="remove-btn">Remove</button></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <th>Total</th>
+        <td><span id="Total"></span></td>
+      </tr>
+    </table>
+
+    <script>
+      const i_Quantity1 = document.getElementById("i_Quantity1");
+      const i_Quantity2 = document.getElementById("i_Quantity2");
+      const i_Quantity3 = document.getElementById("i_Quantity3");
+      const i_Quantity4 = document.getElementById("i_Quantity4");
+
+      const per_unit1 = document.getElementById("per_unit1").innerText;
+      const per_unit2 = document.getElementById("per_unit2").innerText;
+      const per_unit3 = document.getElementById("per_unit3").innerText;
+      const per_unit4 = document.getElementById("per_unit4").innerText;
+
+      const subtotal1 = document.getElementById("subtotal1");
+      const subtotal2 = document.getElementById("subtotal2");
+      const subtotal3 = document.getElementById("subtotal3");
+      const subtotal4 = document.getElementById("subtotal4");
+
+      const total = document.getElementById("Total");
+
+      function calculateSubtotal(quantityInput, pricePerUnit, subtotalElement,calculateAllP) {
+        quantityInput.addEventListener("input", () => {
+          const quantity = Number(quantityInput.value);
+          const subtotal = quantity * Number(pricePerUnit);
+          subtotalElement.innerText = `${subtotal} Rs`;
+          calculateAllP();
+        });
+      }
+
+      calculateSubtotal(i_Quantity1, per_unit1, subtotal1,calculateAll);
+      calculateSubtotal(i_Quantity2, per_unit2, subtotal2,calculateAll);
+      calculateSubtotal(i_Quantity3, per_unit3, subtotal3,calculateAll);
+      calculateSubtotal(i_Quantity4, per_unit4, subtotal4,calculateAll);
+
+      function calculateAll() {
+        total.innerHTML =
+          parseInt(subtotal1.innerText) +
+          parseInt(subtotal2.innerText) +
+          parseInt(subtotal3.innerText) +
+          parseInt(subtotal4.innerText);
+      }
+
+      calculateAll();
+
+
+
+      const removeButtons = document.querySelectorAll(".remove-btn");
+
+      removeButtons.forEach((button, index) => {
+          button.addEventListener('click', () => {
+              button.closest('tr').remove();
+          });
+      });
+    </script>
+  </body>
+</html>
